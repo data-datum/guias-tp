@@ -1,6 +1,6 @@
 --- 
 title: "Probabilidad y Estadística"
-author: "Ingeniería Industrial"
+author: "Ingeniería Industrial  "
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
