@@ -1,7 +1,21 @@
 # Estadística
 
+## Estadística. Concepto
+Estadística es la ciencia que crea, desarrolla y aplica métodos para la toma de decisiones frente a la incertidumbre, partiendo de información empírica y calculando los riesgos.
 
-## Definiciones
+## Campo de Acción
+En cualquier actividad humana, la incertidumbre está presente, por lo que la Estadística brinda metodología aplicable a todas las áreas del conocimiento humano. Con el desarrollo de la Ciencia Estadística, que es relativamente reciente, se han ido perfeccionando técnicas y métodos aplicables a diferentes ramas del conocimiento humano. En ese sentido existen métodos generales y otros se han desarrollado especialmente para su aplicación en las Ciencias Sociales, Médicas, Económicas, Biológicas entre otras, y fundamentalmente ha habido un gran desarrollo de diseños y métodos estadísticos aplicables a la Experimentación Agropecuaria e Ingeniería.
 
+## Aplicaciones
+En el campo de las Ciencias Biológicas y especialmente en las Agronómicas e Industriales, la incertidumbre se incrementa por el hecho de que los factores que afectan los fenómenos de interés son innumerables y muchas veces inmanejables. En esas condiciones la Estadística brinda metodología para la obtención de información empírica confiable y para el análisis adecuado de dicha información a fin de tomar decisiones con sustento científico.
 
-## Bibliografía
+## Ramas de la Estadística
+La Estadística puede dividirse en tres grandes ramas:
+
+* **Estadística Descriptiva**: brinda metodología adecuada para obtener información y describir el comportamiento de un conjunto de individuos.
+
+* **Estadística Inferencial**: permite, diseñar la obtención de información en un subconjunto representativo del total de individuos bajo estudio, y a partir de dicha información extraer conclusiones aplicables a la totalidad de los individuos.
+
+* **Estadística Experimental**: incluye metodología para la obtención y análisis de información de experimentos, que involucran situaciones en las que el investigador interviene y modifica las
+condiciones naturales del fenómeno en estudio.
+

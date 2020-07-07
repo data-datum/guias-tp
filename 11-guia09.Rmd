@@ -69,14 +69,16 @@ TukeyHSD(anova_algodon)
 La estructura financiera de una empresa consiste en la forma en que sus activos se dividen en capital y deuda, y el apalancamiento financiero se refiere al porcentaje de activos financiados con endeudamiento. 
 En el artículo The Effect of Financial Leverage on Return, Tai Ma, de Virginia Tech, afirma que es posible utilizar el apalancamiento financiero para incrementar la tasa de rendimiento sobre el capital. Dicho de otra manera, los accionistas pueden recibir rendimientos más elevados sobre el capital propio con la misma cantidad de inversión si usan apalancamiento financiero. Los siguientes datos muestran las tasas de rendimiento sobre el capital utilizando 3 niveles distintos de apalancamiento financiero, así como un nivel de control (deuda igual a cero) para 24 empresas seleccionadas al azar. 
 
-|| Control |  Bajo  |  Medio |  Alto ||
-|------|-----|-----|-----|-----|-----|-----|
-|| 2.1  | 6.2 | 9.6 | 10.3 ||
-|| 5.6  | 4.0 | 8.0 | 6.9  ||
-|| 3.0  | 8.4 | 5.5 | 7.8  ||
-|| 7.8  | 2.8 | 12.6 | 5.8 ||
-|| 5.2  | 4.2 | 7.0 | 7.2  ||
-|| 2.6  | 5.0 | 7.8 | 12.0 ||
+
+```{r echo=FALSE}
+Control<-c(2.1, 5.6, 3.0, 7.8, 5.2, 2.6)
+Bajo<-c(6.2, 4.0, 8.4, 2.8, 4.2, 5.0)
+Medio<-c(9.6, 8.0, 5.5, 12.6, 7.0, 7.8)
+Alto<-c(10.3, 6.9, 7.8, 5.8, 7.2, 12.0)
+empresa<-cbind(Control, Bajo, Medio, Alto)
+knitr::kable(empresa, align="c",caption="Tasas de rendimiento sobre el capital")
+```
+
 
 Indique:
   

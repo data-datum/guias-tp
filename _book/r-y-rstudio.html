@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 2 Estadística | Probabilidad y Estadística</title>
+  <title>Capítulo 3 R y Rstudio | Probabilidad y Estadística</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 2 Estadística | Probabilidad y Estadística" />
+  <meta property="og:title" content="Capítulo 3 R y Rstudio | Probabilidad y Estadística" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 2 Estadística | Probabilidad y Estadística" />
+  <meta name="twitter:title" content="Capítulo 3 R y Rstudio | Probabilidad y Estadística" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="r-y-rstudio.html"/>
+<link rel="prev" href="estadística.html"/>
+<link rel="next" href="guía-1-introducción-al-uso-de-r-y-rstudio.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -149,7 +149,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.3.3" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#paquetes"><i class="fa fa-check"></i><b>3.3.3</b> Paquetes</a></li>
 <li class="chapter" data-level="3.3.4" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#scripts"><i class="fa fa-check"></i><b>3.3.4</b> Scripts</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#tipos-de-datos-y-estructura-de-datos"><i class="fa fa-check"></i><b>3.4</b> Tipos de datos y Estructura de datos</a></li>
+<li class="chapter" data-level="3.4" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#tipos-de-datos"><i class="fa fa-check"></i><b>3.4</b> Tipos de datos</a></li>
 <li class="chapter" data-level="3.5" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#estructura-de-datos"><i class="fa fa-check"></i><b>3.5</b> Estructura de datos</a><ul>
 <li class="chapter" data-level="3.5.1" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#vectores"><i class="fa fa-check"></i><b>3.5.1</b> Vectores</a></li>
 <li class="chapter" data-level="3.5.2" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#matrices"><i class="fa fa-check"></i><b>3.5.2</b> Matrices</a></li>
@@ -261,30 +261,189 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="estadística" class="section level1">
-<h1><span class="header-section-number">Capítulo 2</span> Estadística</h1>
-<div id="estadística.-concepto" class="section level2">
-<h2><span class="header-section-number">2.1</span> Estadística. Concepto</h2>
-<p>Estadística es la ciencia que crea, desarrolla y aplica métodos para la toma de decisiones frente a la incertidumbre, partiendo de información empírica y calculando los riesgos.</p>
+<div id="r-y-rstudio" class="section level1">
+<h1><span class="header-section-number">Capítulo 3</span> R y Rstudio</h1>
+<div id="r" class="section level2">
+<h2><span class="header-section-number">3.1</span> R</h2>
+<p>R es un lenguaje de programación y entorno computacional dedicado a la estadística.
+Es un lenguaje de programación porque nos permite dar instrucciones, usando código, a nuestros equipos de cómputo para que se realicen tareas específicas. Cuando instalamos R en nuestra computadora, estamos instalando un entorno computacional.
+R es diferente a otros lenguajes de programación que por lo general están diseñados para realizar muchas tareas diferentes, R fue creado con el único propósito de hacer estadística.
+Para instalar R lo podemos hacer desde el CRAN:</p>
+<p><a href="https://cran.r-project.org/bin/windows/base/" class="uri">https://cran.r-project.org/bin/windows/base/</a></p>
+<p>También se encuentran las versiones disponibles para Linux y Mac.</p>
+<p>CRAN es el acrónimo para <em>Cromprehensive R Archive Network</em> y es un repositorio oficial de paquetes.</p>
 </div>
-<div id="campo-de-acción" class="section level2">
-<h2><span class="header-section-number">2.2</span> Campo de Acción</h2>
-<p>En cualquier actividad humana, la incertidumbre está presente, por lo que la Estadística brinda metodología aplicable a todas las áreas del conocimiento humano. Con el desarrollo de la Ciencia Estadística, que es relativamente reciente, se han ido perfeccionando técnicas y métodos aplicables a diferentes ramas del conocimiento humano. En ese sentido existen métodos generales y otros se han desarrollado especialmente para su aplicación en las Ciencias Sociales, Médicas, Económicas, Biológicas entre otras, y fundamentalmente ha habido un gran desarrollo de diseños y métodos estadísticos aplicables a la Experimentación Agropecuaria e Ingeniería.</p>
-</div>
-<div id="aplicaciones" class="section level2">
-<h2><span class="header-section-number">2.3</span> Aplicaciones</h2>
-<p>En el campo de las Ciencias Biológicas y especialmente en las Agronómicas e Industriales, la incertidumbre se incrementa por el hecho de que los factores que afectan los fenómenos de interés son innumerables y muchas veces inmanejables. En esas condiciones la Estadística brinda metodología para la obtención de información empírica confiable y para el análisis adecuado de dicha información a fin de tomar decisiones con sustento científico.</p>
-</div>
-<div id="ramas-de-la-estadística" class="section level2">
-<h2><span class="header-section-number">2.4</span> Ramas de la Estadística</h2>
-<p>La Estadística puede dividirse en tres grandes ramas:</p>
+<div id="rstudio" class="section level2">
+<h2><span class="header-section-number">3.2</span> Rstudio</h2>
+<p>Rstudio es una IDE para R. Una IDE es un entorno integrado de desarrollo.
+Una IDE nos proporcional herramientas para escribir y revisar nuestro código, administra los archivos que estamos usando, gestionar nuestro entorno de trabajo y algunas otras herramientas de productividad.
+Para instalar Rstudio, es necesario descargar y ejecutar alguno de los instaladores disponibles en el sitio oficial.</p>
+<div id="partes-de-rstudio" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Partes de Rstudio</h3>
+<p>Al abrir Rstudio se visualiza lo siguiente</p>
+<div id="fuente" class="section level4">
+<h4><span class="header-section-number">3.2.1.1</span> Fuente</h4>
 <ul>
-<li><p><strong>Estadística Descriptiva</strong>: brinda metodología adecuada para obtener información y describir el comportamiento de un conjunto de individuos.</p></li>
-<li><p><strong>Estadística Inferencial</strong>: permite, diseñar la obtención de información en un subconjunto representativo del total de individuos bajo estudio, y a partir de dicha información extraer conclusiones aplicables a la totalidad de los individuos.</p></li>
-<li><p><strong>Estadística Experimental</strong>: incluye metodología para la obtención y análisis de información de experimentos, que involucran situaciones en las que el investigador interviene y modifica las
-condiciones naturales del fenómeno en estudio.</p></li>
+<li>Es en donde se escribe el código para documentarlo en scripts.</li>
+<li>En primer lugar se detallan las librerías con las que se trabajan.</li>
+<li>Para comentar el código usamos numeral #</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="co"># Este es un comentario</span></a></code></pre></div>
+</div>
+<div id="consola" class="section level4">
+<h4><span class="header-section-number">3.2.1.2</span> Consola</h4>
+<ul>
+<li>Es la parte más importante porque es donde nuestro código es interpretado.</li>
+<li>Podemos escribir directamente aquí nuestro código y será ejecutado.</li>
+</ul>
+</div>
+<div id="entorno-historia-conexiones-y-git" class="section level4">
+<h4><span class="header-section-number">3.2.1.3</span> Entorno, Historia, Conexiones y Git</h4>
+<ul>
+<li>En esta parte se guardan las bases de datos, las funciones del entorno de trabajo.</li>
+<li>También desde allí podemos importar bases de datos.</li>
+<li>Para limpiar nuestro entorno de trabajo podemos hacerlo con el símbolo de la escobita.</li>
+</ul>
+</div>
+<div id="archivos-gráficos-paquetes-ayuda-visor" class="section level4">
+<h4><span class="header-section-number">3.2.1.4</span> Archivos, Gráficos, Paquetes, Ayuda, Visor</h4>
+<ul>
+<li>En esta sección podemos ver los archivos la carpeta que funciona como entorno de trabajo.</li>
+<li>Se pueden visualizar los gráficos que hemos realizado.</li>
+<li>Se ofrece una lista de paquetes instalados y cargados en nuestro entorno de Rstudio.</li>
+<li>La ayuda nos permite ver la documentación de una determinada librería.</li>
+<li>Finalmente en la pestaña <em>Viewer</em> podemos visualizar documentos de texto o interactivos que realicemos.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="conceptos-básicos-en-el-uso-de-r" class="section level2">
+<h2><span class="header-section-number">3.3</span> Conceptos básicos en el uso de R</h2>
+<p>En R, todo es un objeto. Todos los datos y estructuras de datos son objetos. Además, todos los objetos tienen un nombre para identificarlos.</p>
+<div id="asignación" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> Asignación</h3>
+<p>En R usamos &lt;- para asignar un nombre a un objeto</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">radio &lt;-<span class="st"> </span><span class="dv">2</span></a></code></pre></div>
+</div>
+<div id="entorno-de-trabajo" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> Entorno de trabajo</h3>
+<ul>
+<li>Es en donde se guardarán nuestros archivos, scripts y gráficos</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">getwd</span>()</a></code></pre></div>
+<pre><code>## [1] &quot;/home/roxana/guias-tp&quot;</code></pre>
+<ul>
+<li>Si quisiéramos definir otro entorno de trabajo</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">setwd</span>()</a></code></pre></div>
+</div>
+<div id="paquetes" class="section level3">
+<h3><span class="header-section-number">3.3.3</span> Paquetes</h3>
+<ul>
+<li>Un paquete es una colección de funciones diseñadas para atender una tarea específica. Para instalarlos desde el CRAN lo hacemos de la siguiente manera:</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)</a></code></pre></div>
+<ul>
+<li>Una vez concluida la instalación podemos usar las funciones de ese paquete mediante</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1"><span class="kw">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</a></code></pre></div>
+<ul>
+<li>Para conocer todos los paquetes que tenemos instalados</li>
+</ul>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="kw">installed.packages</span>()</a></code></pre></div>
+</div>
+<div id="scripts" class="section level3">
+<h3><span class="header-section-number">3.3.4</span> Scripts</h3>
+<p>Los scripts son documentos de texto con la extensión .R
+Son útiles para guardar y poder compartir código.</p>
+</div>
+</div>
+<div id="tipos-de-datos" class="section level2">
+<h2><span class="header-section-number">3.4</span> Tipos de datos</h2>
+<p><em>En R, todo son objetos</em></p>
+<p>Los objetos más simples se llaman atómicos:</p>
+<ul>
+<li>character(cadena de caracteres)</li>
+<li>numeric (números reales)</li>
+<li>integer(números enteros)</li>
+<li>complex (números complejos)</li>
+<li>logical (lógicos o booleanos, toman valores de TRUE o FALSE)</li>
+</ul>
+</div>
+<div id="estructura-de-datos" class="section level2">
+<h2><span class="header-section-number">3.5</span> Estructura de datos</h2>
+<div id="vectores" class="section level3">
+<h3><span class="header-section-number">3.5.1</span> Vectores</h3>
+<p>Los vectores son arreglos ordenados en los cuales se puede almacenar información de tipo numérico (variable cuantitativa), alfanumérico (variable cualitativa) o lógico (TRUE o FALSE).
+La función de R para crear un vector es <strong>c()</strong> y que significa concatenar; dentro de los paréntesis de esta función se ubica la información a almacenar. Una vez construído el vector se acostumbra a etiquetarlo con un nombre corto y representativo de la información que almacena, la asignación se hace por medio del operador &lt;- entre el nombre y el vector.</p>
+<ul>
+<li>Vector de enteros</li>
+</ul>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1"><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">5</span>)</a></code></pre></div>
+<pre><code>## [1] 3 2 5</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1">numeros&lt;-<span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb11-2" title="2">numeros</a></code></pre></div>
+<pre><code>## [1] 3 2 5</code></pre>
+<ul>
+<li>Vector de decimales</li>
+</ul>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1"><span class="kw">c</span>(<span class="fl">3.2</span>,<span class="fl">2.4</span>,<span class="fl">5.8</span>)</a></code></pre></div>
+<pre><code>## [1] 3.2 2.4 5.8</code></pre>
+<ul>
+<li>Vector de caracteres</li>
+</ul>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" title="1"><span class="kw">c</span>(<span class="st">&quot;Ana&quot;</span>,<span class="st">&quot;Sofía&quot;</span>,<span class="st">&quot;Pedro&quot;</span>,<span class="st">&quot;Juan&quot;</span>)</a></code></pre></div>
+<pre><code>## [1] &quot;Ana&quot;   &quot;Sofía&quot; &quot;Pedro&quot; &quot;Juan&quot;</code></pre>
+<ul>
+<li>Vector de booleanos</li>
+</ul>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" title="1"><span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">FALSE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>)</a></code></pre></div>
+<pre><code>## [1]  TRUE FALSE  TRUE FALSE</code></pre>
+</div>
+<div id="matrices" class="section level3">
+<h3><span class="header-section-number">3.5.2</span> Matrices</h3>
+<p>Las matrices son arreglos rectangulares de filas y columnas con información numérica, alfanumérica o lógica. Para construir una matriz se usa la función <strong>matrix( )</strong>. Por ejemplo, para crear una matriz de 4 filas y 5 columnas (de dimensión 4×5) con los primeros 20 números positivos se escribe el código siguiente en la consola.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" title="1">mimatriz &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dt">data=</span><span class="dv">1</span><span class="op">:</span><span class="dv">20</span>, <span class="dt">nrow=</span><span class="dv">4</span>, <span class="dt">ncol=</span><span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb19-2" title="2">mimatriz</a></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5]
+## [1,]    1    5    9   13   17
+## [2,]    2    6   10   14   18
+## [3,]    3    7   11   15   19
+## [4,]    4    8   12   16   20</code></pre>
+</div>
+<div id="dataframes-o-marco-de-datos" class="section level3">
+<h3><span class="header-section-number">3.5.3</span> Dataframes o Marco de datos</h3>
+<p>Data.frame es uno de los objetos más utilizados en R, porque permite agrupar vectores con información de diferente tipo (numérica, alfanumérica o lógica) en un mismo objeto, la única restricción es que los vectores deben tener la misma longitud. Para crear un marco de datos se usa la función <strong>data.frame()</strong></p>
+<ul>
+<li>Paso 1: creamos los vectores</li>
+</ul>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" title="1"><span class="co">#Creamos en primer lugar tres vectores</span></a>
+<a class="sourceLine" id="cb21-2" title="2">alumnos&lt;-<span class="kw">c</span>(<span class="st">&quot;Ana&quot;</span>,<span class="st">&quot;Sofía&quot;</span>,<span class="st">&quot;Luis&quot;</span>, <span class="st">&quot;Pedro&quot;</span>,<span class="st">&quot;Juan&quot;</span>)</a>
+<a class="sourceLine" id="cb21-3" title="3">edad&lt;-<span class="kw">c</span>(<span class="dv">15</span>, <span class="dv">19</span>, <span class="dv">13</span>, <span class="dv">18</span>, <span class="dv">20</span>)</a>
+<a class="sourceLine" id="cb21-4" title="4">deporte&lt;-<span class="kw">c</span>(<span class="ot">TRUE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>, <span class="ot">FALSE</span>, <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb21-5" title="5">comic.fav&lt;-<span class="kw">c</span>(<span class="st">&#39;Superman&#39;</span>, <span class="st">&#39;Superman&#39;</span>, <span class="st">&#39;Batman&#39;</span>, <span class="st">&#39;Spiderman&#39;</span>, <span class="st">&#39;Batman&#39;</span>)</a></code></pre></div>
+<ul>
+<li>Paso 2: creamos un data.frame a partir de los vectores</li>
+</ul>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" title="1"><span class="co">#Usamos la función data.frame</span></a>
+<a class="sourceLine" id="cb22-2" title="2">mimarco &lt;-<span class="st"> </span><span class="kw">data.frame</span>(alumnos, edad, deporte, comic.fav)</a>
+<a class="sourceLine" id="cb22-3" title="3">mimarco</a></code></pre></div>
+<pre><code>##   alumnos edad deporte comic.fav
+## 1     Ana   15    TRUE  Superman
+## 2   Sofía   19    TRUE  Superman
+## 3    Luis   13   FALSE    Batman
+## 4   Pedro   18   FALSE Spiderman
+## 5    Juan   20    TRUE    Batman</code></pre>
+<div id="bibliografía" class="section level5">
+<h5><span class="header-section-number">3.5.3.0.1</span> Bibliografía</h5>
+<ul>
+<li>R para principiantes. <em>Juan Bosco Mendoza Vega</em>
+Disponible en <a href="http://bit.ly/2Zg0I3M" class="uri">http://bit.ly/2Zg0I3M</a></li>
+<li>El arte de programar en R <em>Julio Sergio Santana &amp; Efraín Mateos Farfán</em> Disponible en <a href="http://bit.ly/2N2Y1Y8" class="uri">http://bit.ly/2N2Y1Y8</a></li>
 </ul>
 
+</div>
+</div>
 </div>
 </div>
             </section>
@@ -292,8 +451,8 @@ condiciones naturales del fenómeno en estudio.</p></li>
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="r-y-rstudio.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="estadística.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="guía-1-introducción-al-uso-de-r-y-rstudio.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -343,20 +502,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
