@@ -1,4 +1,4 @@
-# Guía 1
+# Guía 1 - Introducción al uso de R y Rstudio
 
 ## Problema 1 
 
@@ -7,7 +7,7 @@
 ```{r eval=FALSE}
 gaseosas<-read.csv("~/data/gaseosas.csv", sep=";")
 ```
-
+  
 ```{r, tidy=FALSE, echo=FALSE, eval=FALSE}
 library(kableExtra)
 library(magrittr)

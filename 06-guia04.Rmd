@@ -10,7 +10,6 @@ Calcular las probabilidades de obtener:
 * La obtención de 7 puntos en una tirada de un par de dados. 
 
 
-
 ## Ejercicio 2
 
 Una máquina produce piezas de tipo A y de tipo B. La probabilidad que una pieza A sea defectuosa es de 0.04 y la probabilidad que una pieza B lo sea es de 0.035.

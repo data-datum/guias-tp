@@ -1,3 +1,127 @@
-# Guía 2
+# Guía 2 - Variables aleatorias
 
-Problema 1
+## Ejercicio 1
+
+Clasificar las siguientes variables __de acuerdo a su tipo__ (cualitativas, cuantitativas discretas o cuantitativas continuas) e identificar las __escalas de medición__ (nominal, ordinal, de intervalo, razón o proporción) en cada caso:
+
+
+* Número de ventas por producto en una fábrica de aberturas de aluminio.
+* Diferentes tipos de empresas según clasificación por tamaño (pequeñas, medianas y grandes empresas).
+* Altura de arboles de Eucaliptus grandis en ensayos de 10 años de implantados.
+* Clasificación de la leche según los diferentes lotes de la Estación Experimental INTA Reconquista. 
+* Número de terneros nacidos en establecimientos agropecuarios de la provincia de Corrientes en un año. 
+* Producción mensual en Tn, a lo largo de un año, de una planta procesada de arroz.
+* Cantidad de empleados de las distintas sucursales del supermercado Impulso.
+* Consumo eléctrico por mes de  una fábrica (Kw/hora).
+* Número de operaciones aéreas en un aeropuerto según los días de la semana.
+* Temperatura de los distintos procesos en una fábrica de embutidos. 
+
+
+## Ejercicio 2
+
+Se registró el lugar de procedencia, según departamento, de 40 empleados de la Dirección Provincial de Energía de Corrientes. Los datos son los siguientes:
+
+\begin{tabular}{||c| c | c | c | c ||}
+\hline
+Ituzaingo & Beron de Astrada  & Goya & Capital & Mercedes \\
+\hline
+Mercedes & Santo Tome & Beron de Astrada & San Cosme & Ituzaingo \\
+\hline
+Capita & Capital & Capital & Mercedes & Mercedes \\
+\hline
+Capital & Capital & Capital & Mercedes & Mercedes \\
+\hline
+Capital & Curuzu Cuatia & Mercedes & Capital & Curuzu Cuatia \\
+\hline
+San Cosme & Itati & Alvear & Capital & Alvear \\
+\hline
+Curuzu Cuatia & Mercedes & Goya & Esquina & Ituzaingo \\
+\hline
+Ituzaingo & Esquina & Capital & Itati & Goya \\
+\hline
+Itati & Capital & Goya & Goya & Capital \\
+\hline
+\end{tabular}
+
+
+
+* Construir una tabla de frecuencias absoluta y redactar 2 (dos) oraciones con lo más relevante que pueda observar.
+* Realizar una tabla de frecuencias relativas.
+* Realizar un gráfico de barras con la distribución por departamento. 
+
+
+
+### Práctica en R
+
+* Para ingresar en R, cree un vector de caracteres con estos datos. 
+* Para crear una tabla de frecuencias absolutas, use la función table().
+* Para crear una tabla de frecuencias relativas, use la función prop.table().
+* Para realizar un gráfico de barras, use la función barplot().
+
+
+
+### IMPORTANTE
+Escriba los nombres en minúscula, sin espacio y sin tilde, para evitar errores innecesarios. Ejemplo: "Berón de Astrada" lo escribo beron_de_astrada, o beron-de-astrada, separada por guiones, en vez de espacios.
+
+
+## Ejercicio 3
+Las ganancias de peso en Kg de 40 cerdos en 60 días fueron:
+
+
+\begin{tabular}{|| c | c | c | c | c | c | c | c | c | c ||}
+\hline
+30.2 & 17.6  & 34.3 & 30.6 & 33.4 & 31.6 & 52.1 & 21.8 & 30.1 & 36.7 \\
+\hline
+33.3 & 53.1  & 11.5 & 21.5 & 32.4 & 40.1 & 53.4 & 40.9 & 33.2 & 32.7 \\
+\hline
+29.0 & 15.2 & 12.2 & 27.3 & 29.5 & 33.6 & 32.3 & 25.5 & 19.7 & 33.4 \\
+\hline
+20.5 & 22.8 & 50.9 & 36.1 & 30.5 & 28.2 & 20.3 & 21.6 & 34.3 & 25.5 \\
+\hline
+\end{tabular}
+
+
+
+* Confeccione una tabla de frecuencias absoluta e interprete los resultados.
+* Realice una tabla de frecuencias relativas. 
+
+
+A continuación se presentan el histograma, polígono de frecuencias y ojiva correspondientes a la tabla de distribuciones de frecuencias
+
+```{r echo=FALSE}
+cerdos<-c(30.2, 17.6, 34.3, 30.6, 33.4, 31.6, 52.1, 21.8, 30.1, 36.7,
+          33.3, 53.1, 11.5, 21.5, 32.4, 40.1, 53.4, 40.9, 33.2, 32.7,
+          29.0, 15.2, 12.2, 27.3, 29.5, 33.6, 32.6, 25.5, 19.7, 33.4, 
+          20.5, 22.8, 50.9, 36.1, 30.5, 28.2, 20.3, 21.6, 34.3, 25.5)
+```
+
+```{r eval=TRUE, echo=FALSE, fig.height=4, fig.width=5}
+library(agricolae) #cargo la librería agricolae
+hist_cerdos<-hist(cerdos) #realizo un histograma
+polygon.freq(hist_cerdos) #realizo un polígono de frecuencias
+```
+
+```{r echo=FALSE, fig.height=4, fig.width=5}
+ogive.freq(hist_cerdos) 
+```
+
+
+Para cada ítem seleccionar el gráfico que corresponda e indicar
+
+
+* El porcentaje de cerdos que ganó, como máximo, 45 kg. 
+* El porcentaje de cerdos que ganó en promedio 24.07 kg.
+* Los pesos promedio más y menos frecuentes. 
+
+
+
+### Práctica en R
+
+
+* Para ingresar estos datos en R, cree un vector numérico con estos datos. 
+* Para crear una tabla de frecuencias absolutas, use la función table().
+* Para crear una tabla de frecuencias relativas, use la función prop.table().
+* Para realizar un histograma, use la función hist().
+* Para realizar un polígono de frecuencias, haga uso de la librería agricolae.
+* Para realizar un gráfico de ojiva, haga uso de la librería agricolae.
+
