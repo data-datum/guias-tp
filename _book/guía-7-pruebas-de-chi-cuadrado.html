@@ -149,12 +149,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.3.3" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#paquetes"><i class="fa fa-check"></i><b>3.3.3</b> Paquetes</a></li>
 <li class="chapter" data-level="3.3.4" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#scripts"><i class="fa fa-check"></i><b>3.3.4</b> Scripts</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#tipos-de-datos-y-estructura-de-datos"><i class="fa fa-check"></i><b>3.4</b> Tipos de datos y Estructura de datos</a></li>
+<li class="chapter" data-level="3.4" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#tipos-de-datos"><i class="fa fa-check"></i><b>3.4</b> Tipos de datos</a></li>
 <li class="chapter" data-level="3.5" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#estructura-de-datos"><i class="fa fa-check"></i><b>3.5</b> Estructura de datos</a><ul>
 <li class="chapter" data-level="3.5.1" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#vectores"><i class="fa fa-check"></i><b>3.5.1</b> Vectores</a></li>
 <li class="chapter" data-level="3.5.2" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#matrices"><i class="fa fa-check"></i><b>3.5.2</b> Matrices</a></li>
 <li class="chapter" data-level="3.5.3" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#dataframes-o-marco-de-datos"><i class="fa fa-check"></i><b>3.5.3</b> Dataframes o Marco de datos</a></li>
 </ul></li>
+<li class="chapter" data-level="3.6" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#bibliografía"><i class="fa fa-check"></i><b>3.6</b> Bibliografía</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="guía-1-introducción-al-uso-de-r-y-rstudio.html"><a href="guía-1-introducción-al-uso-de-r-y-rstudio.html"><i class="fa fa-check"></i><b>4</b> Guía 1 - Introducción al uso de R y Rstudio</a><ul>
 <li class="chapter" data-level="4.1" data-path="guía-1-introducción-al-uso-de-r-y-rstudio.html"><a href="guía-1-introducción-al-uso-de-r-y-rstudio.html#problema-1"><i class="fa fa-check"></i><b>4.1</b> Problema 1</a></li>
@@ -317,34 +318,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tbody>
 </table>
 <p>¿Las preferencias de los niños varones para estos programas difiere significativamente de las preferencias de la niñas? Utilize un 0.05 nivel de significancia.</p>
-<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb144-1" title="1"><span class="co">#Vamos a calcular los grados de libertad</span></a>
-<a class="sourceLine" id="cb144-2" title="2">columnas&lt;-<span class="dv">3</span></a>
-<a class="sourceLine" id="cb144-3" title="3">filas&lt;-<span class="dv">2</span></a>
-<a class="sourceLine" id="cb144-4" title="4">DF&lt;-(columnas<span class="dv">-1</span>)<span class="op">*</span>(filas<span class="dv">-1</span>)=(<span class="dv">3-1</span>)<span class="op">*</span>(<span class="dv">2-1</span>)</a></code></pre></div>
-<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb145-1" title="1"><span class="co"># Vamos a calcular los valores esperados</span></a>
-<a class="sourceLine" id="cb145-2" title="2">E11 &lt;-<span class="st"> </span>(<span class="dv">100</span> <span class="op">*</span><span class="st"> </span><span class="dv">100</span>) <span class="op">/</span><span class="st"> </span><span class="dv">300</span> </a>
-<a class="sourceLine" id="cb145-3" title="3">E12 &lt;-<span class="st"> </span>(<span class="dv">100</span> <span class="op">*</span><span class="st"> </span><span class="dv">110</span>) <span class="op">/</span><span class="st"> </span><span class="dv">300</span> </a>
-<a class="sourceLine" id="cb145-4" title="4">E13 &lt;-<span class="st"> </span>(<span class="dv">100</span> <span class="op">*</span><span class="st"> </span><span class="dv">90</span>) <span class="op">/</span><span class="st"> </span><span class="dv">300</span> </a>
-<a class="sourceLine" id="cb145-5" title="5">E21 &lt;-<span class="st"> </span>(<span class="dv">200</span> <span class="op">*</span><span class="st"> </span><span class="dv">100</span>) <span class="op">/</span><span class="st"> </span><span class="dv">300</span> </a>
-<a class="sourceLine" id="cb145-6" title="6">E22 &lt;-(<span class="dv">200</span> <span class="op">*</span><span class="st"> </span><span class="dv">110</span>) <span class="op">/</span><span class="st"> </span><span class="dv">300</span> </a>
-<a class="sourceLine" id="cb145-7" title="7">E23 &lt;-<span class="st"> </span>(<span class="dv">200</span> <span class="op">*</span><span class="st"> </span><span class="dv">90</span>) <span class="op">/</span><span class="st"> </span><span class="dv">300</span> </a></code></pre></div>
-<div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb146-1" title="1"><span class="co">#Los valores observados son los que aparecen en la tabla</span></a>
-<a class="sourceLine" id="cb146-2" title="2">O11&lt;-<span class="dv">50</span> <span class="co">#niños</span></a>
-<a class="sourceLine" id="cb146-3" title="3">O12&lt;-<span class="dv">30</span></a>
-<a class="sourceLine" id="cb146-4" title="4">O13&lt;-<span class="dv">20</span></a>
-<a class="sourceLine" id="cb146-5" title="5">O21&lt;-<span class="dv">50</span> <span class="co">#niñas</span></a>
-<a class="sourceLine" id="cb146-6" title="6">O22&lt;-<span class="dv">80</span></a>
-<a class="sourceLine" id="cb146-7" title="7">O23&lt;-<span class="dv">70</span></a></code></pre></div>
-<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb147-1" title="1"><span class="co">#Vamos a calcular X cuadrado</span></a>
-<a class="sourceLine" id="cb147-2" title="2"><span class="co">#reemplazamos en la fórmula dada en teoría</span></a></code></pre></div>
+<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb149-1" title="1"><span class="co">#Vamos a calcular los grados de libertad</span></a>
+<a class="sourceLine" id="cb149-2" title="2">columnas&lt;-<span class="dv">3</span></a>
+<a class="sourceLine" id="cb149-3" title="3">filas&lt;-<span class="dv">2</span></a>
+<a class="sourceLine" id="cb149-4" title="4">DF&lt;-(columnas<span class="dv">-1</span>)<span class="op">*</span>(filas<span class="dv">-1</span>)=(<span class="dv">3-1</span>)<span class="op">*</span>(<span class="dv">2-1</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb150-1" title="1"><span class="co"># Vamos a calcular los valores esperados</span></a>
+<a class="sourceLine" id="cb150-2" title="2">E11 &lt;-<span class="st"> </span>(<span class="dv">100</span> <span class="op">*</span><span class="st"> </span><span class="dv">100</span>) <span class="op">/</span><span class="st"> </span><span class="dv">300</span> </a>
+<a class="sourceLine" id="cb150-3" title="3">E12 &lt;-<span class="st"> </span>(<span class="dv">100</span> <span class="op">*</span><span class="st"> </span><span class="dv">110</span>) <span class="op">/</span><span class="st"> </span><span class="dv">300</span> </a>
+<a class="sourceLine" id="cb150-4" title="4">E13 &lt;-<span class="st"> </span>(<span class="dv">100</span> <span class="op">*</span><span class="st"> </span><span class="dv">90</span>) <span class="op">/</span><span class="st"> </span><span class="dv">300</span> </a>
+<a class="sourceLine" id="cb150-5" title="5">E21 &lt;-<span class="st"> </span>(<span class="dv">200</span> <span class="op">*</span><span class="st"> </span><span class="dv">100</span>) <span class="op">/</span><span class="st"> </span><span class="dv">300</span> </a>
+<a class="sourceLine" id="cb150-6" title="6">E22 &lt;-(<span class="dv">200</span> <span class="op">*</span><span class="st"> </span><span class="dv">110</span>) <span class="op">/</span><span class="st"> </span><span class="dv">300</span> </a>
+<a class="sourceLine" id="cb150-7" title="7">E23 &lt;-<span class="st"> </span>(<span class="dv">200</span> <span class="op">*</span><span class="st"> </span><span class="dv">90</span>) <span class="op">/</span><span class="st"> </span><span class="dv">300</span> </a></code></pre></div>
+<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb151-1" title="1"><span class="co">#Los valores observados son los que aparecen en la tabla</span></a>
+<a class="sourceLine" id="cb151-2" title="2">O11&lt;-<span class="dv">50</span> <span class="co">#niños</span></a>
+<a class="sourceLine" id="cb151-3" title="3">O12&lt;-<span class="dv">30</span></a>
+<a class="sourceLine" id="cb151-4" title="4">O13&lt;-<span class="dv">20</span></a>
+<a class="sourceLine" id="cb151-5" title="5">O21&lt;-<span class="dv">50</span> <span class="co">#niñas</span></a>
+<a class="sourceLine" id="cb151-6" title="6">O22&lt;-<span class="dv">80</span></a>
+<a class="sourceLine" id="cb151-7" title="7">O23&lt;-<span class="dv">70</span></a></code></pre></div>
+<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb152-1" title="1"><span class="co">#Vamos a calcular X cuadrado</span></a>
+<a class="sourceLine" id="cb152-2" title="2"><span class="co">#reemplazamos en la fórmula dada en teoría</span></a></code></pre></div>
 <p><img src="img/chi-cuadrado.png" width="40%" /></p>
-<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb148-1" title="1"><span class="co">#En R</span></a>
-<a class="sourceLine" id="cb148-2" title="2">  Xcuadrado&lt;-(O11<span class="op">-</span>E11)<span class="op">^</span><span class="dv">2</span><span class="op">/</span>E11 <span class="op">+</span><span class="st"> </span>(O12<span class="op">-</span>E12)<span class="op">^</span><span class="dv">2</span><span class="op">/</span>E12 <span class="op">+</span><span class="st"> </span>(O13<span class="op">-</span>E13)<span class="op">^</span><span class="dv">2</span><span class="op">/</span>E13 <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb148-3" title="3"><span class="st">    </span>(O21<span class="op">-</span>E21)<span class="op">^</span><span class="dv">2</span><span class="op">/</span>E21 <span class="op">+</span><span class="st">  </span>(O22<span class="op">-</span>E22)<span class="op">^</span><span class="dv">2</span><span class="op">/</span>E22 <span class="op">+</span><span class="st"> </span>(O23<span class="op">-</span>E23)<span class="op">^</span><span class="dv">2</span><span class="op">/</span>E23</a></code></pre></div>
-<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb149-1" title="1"><span class="co">#Ahora busco el p-valor reemplazando en primer lugar el valor de X cuadrado</span></a>
-<a class="sourceLine" id="cb149-2" title="2"><span class="co">#X_2 valor de chi cuadrado obtenido</span></a>
-<a class="sourceLine" id="cb149-3" title="3"><span class="co">#df=grados de libertad</span></a>
-<a class="sourceLine" id="cb149-4" title="4"><span class="kw">pchisq</span>(Xcuadrado, <span class="dt">df=</span><span class="dv">2</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb153-1" title="1"><span class="co">#En R</span></a>
+<a class="sourceLine" id="cb153-2" title="2">  Xcuadrado&lt;-(O11<span class="op">-</span>E11)<span class="op">^</span><span class="dv">2</span><span class="op">/</span>E11 <span class="op">+</span><span class="st"> </span>(O12<span class="op">-</span>E12)<span class="op">^</span><span class="dv">2</span><span class="op">/</span>E12 <span class="op">+</span><span class="st"> </span>(O13<span class="op">-</span>E13)<span class="op">^</span><span class="dv">2</span><span class="op">/</span>E13 <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb153-3" title="3"><span class="st">    </span>(O21<span class="op">-</span>E21)<span class="op">^</span><span class="dv">2</span><span class="op">/</span>E21 <span class="op">+</span><span class="st">  </span>(O22<span class="op">-</span>E22)<span class="op">^</span><span class="dv">2</span><span class="op">/</span>E22 <span class="op">+</span><span class="st"> </span>(O23<span class="op">-</span>E23)<span class="op">^</span><span class="dv">2</span><span class="op">/</span>E23</a></code></pre></div>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb154-1" title="1"><span class="co">#Ahora busco el p-valor reemplazando en primer lugar el valor de X cuadrado</span></a>
+<a class="sourceLine" id="cb154-2" title="2"><span class="co">#X_2 valor de chi cuadrado obtenido</span></a>
+<a class="sourceLine" id="cb154-3" title="3"><span class="co">#df=grados de libertad</span></a>
+<a class="sourceLine" id="cb154-4" title="4"><span class="kw">pchisq</span>(Xcuadrado, <span class="dt">df=</span><span class="dv">2</span>)</a></code></pre></div>
 </div>
 <div id="ejercicio-3-5" class="section level2">
 <h2><span class="header-section-number">10.3</span> Ejercicio 3</h2>
@@ -354,9 +355,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>La cantidad de ejercicio físico que realizan es Freq=frecuente, None=ninguno, Some=algo.
 Se observan los datos en la siguiente <strong>tabla de contingencia</strong>.</p></li>
 </ul>
-<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb150-1" title="1"><span class="kw">library</span>(MASS)</a>
-<a class="sourceLine" id="cb150-2" title="2">tbl &lt;-<span class="st"> </span><span class="kw">table</span>(survey<span class="op">$</span>Smoke, survey<span class="op">$</span>Exer)</a>
-<a class="sourceLine" id="cb150-3" title="3">tbl</a></code></pre></div>
+<div class="sourceCode" id="cb155"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb155-1" title="1"><span class="kw">library</span>(MASS)</a>
+<a class="sourceLine" id="cb155-2" title="2">tbl &lt;-<span class="st"> </span><span class="kw">table</span>(survey<span class="op">$</span>Smoke, survey<span class="op">$</span>Exer)</a>
+<a class="sourceLine" id="cb155-3" title="3">tbl</a></code></pre></div>
 <pre><code>##        
 ##         Freq None Some
 ##   Heavy    7    1    3
@@ -364,18 +365,18 @@ Se observan los datos en la siguiente <strong>tabla de contingencia</strong>.</p
 ##   Occas   12    3    4
 ##   Regul    9    1    7</code></pre>
 <p>Haga la prueba de hipótesis si el hábito de fumar de los estudiantes es independiente del ejercicio que realizan en un 0.05 y concluya.</p>
-<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb152-1" title="1"><span class="kw">chisq.test</span>(tbl)</a></code></pre></div>
+<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb157-1" title="1"><span class="kw">chisq.test</span>(tbl)</a></code></pre></div>
 </div>
 <div id="ejercicio-4-3" class="section level2">
 <h2><span class="header-section-number">10.4</span> Ejercicio 4</h2>
 <p>Vamos a trabajar con el set de datos mtcars con el cual habíamos trabajado previamente.
 Los datos fueron extraido de la revista Motor Trend US de 1974 y muestran el consumo de combustible y 10 aspectos del diseño de automóviles en 32 modelos diferentes. Para una explicación más detallada de las variables en estudio en este set de datos, puede visitar</p>
 <p><a href="http://rstudio-pubs-static.s3.amazonaws.com/61800_faea93548c6b49cc91cd0c5ef5059894.html" class="uri">http://rstudio-pubs-static.s3.amazonaws.com/61800_faea93548c6b49cc91cd0c5ef5059894.html</a></p>
-<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb153-1" title="1"><span class="co"># Recordemos que para buscar más información en R</span></a>
-<a class="sourceLine" id="cb153-2" title="2">?mtcars</a></code></pre></div>
+<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb158-1" title="1"><span class="co"># Recordemos que para buscar más información en R</span></a>
+<a class="sourceLine" id="cb158-2" title="2">?mtcars</a></code></pre></div>
 <p>Vamos a agrupar de a 2 variables y formar distintas tablas de contingencia</p>
 <p>Tabla 1: Variables vs y am. Corresponde a vs=tipo de motor (0=V-shaped, y 1=straight) y am=transmisión (0 = automática, 1 = manual)</p>
-<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb154-1" title="1"><span class="kw">attach</span>(mtcars)</a></code></pre></div>
+<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb159-1" title="1"><span class="kw">attach</span>(mtcars)</a></code></pre></div>
 <pre><code>## The following objects are masked from mtcars (pos = 3):
 ## 
 ##     am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
@@ -406,23 +407,26 @@ Los datos fueron extraido de la revista Motor Trend US de 1974 y muestran el con
 <pre><code>## The following objects are masked from mtcars (pos = 12):
 ## 
 ##     am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
-<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb165-1" title="1">vsAm &lt;-<span class="st"> </span><span class="kw">table</span>(vs, am)  </a>
-<a class="sourceLine" id="cb165-2" title="2">vsAm</a></code></pre></div>
+<pre><code>## The following objects are masked from mtcars (pos = 13):
+## 
+##     am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb171-1" title="1">vsAm &lt;-<span class="st"> </span><span class="kw">table</span>(vs, am)  </a>
+<a class="sourceLine" id="cb171-2" title="2">vsAm</a></code></pre></div>
 <pre><code>##    am
 ## vs   0  1
 ##   0 12  6
 ##   1  7  7</code></pre>
 <p>Tabla 2: Variables gear y carb. Corresponde a carb=número de carburadores y gear=número de marchas adelante.</p>
-<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb167-1" title="1">Gearcarb&lt;-<span class="st"> </span><span class="kw">table</span>(gear, carb)  </a>
-<a class="sourceLine" id="cb167-2" title="2">Gearcarb</a></code></pre></div>
+<div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb173-1" title="1">Gearcarb&lt;-<span class="st"> </span><span class="kw">table</span>(gear, carb)  </a>
+<a class="sourceLine" id="cb173-2" title="2">Gearcarb</a></code></pre></div>
 <pre><code>##     carb
 ## gear 1 2 3 4 6 8
 ##    3 3 4 3 5 0 0
 ##    4 4 4 0 4 0 0
 ##    5 0 2 0 1 1 1</code></pre>
 <p>Tabla 3: Variables cyl y gear. Corresponde a cyl= número de cilindros y gear=número de marchas adelante</p>
-<div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb169-1" title="1">cylGear &lt;-<span class="st"> </span><span class="kw">table</span>(cyl,gear)</a>
-<a class="sourceLine" id="cb169-2" title="2">cylGear</a></code></pre></div>
+<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb175-1" title="1">cylGear &lt;-<span class="st"> </span><span class="kw">table</span>(cyl,gear)</a>
+<a class="sourceLine" id="cb175-2" title="2">cylGear</a></code></pre></div>
 <pre><code>##    gear
 ## cyl  3  4  5
 ##   4  1  8  2
@@ -432,15 +436,15 @@ Los datos fueron extraido de la revista Motor Trend US de 1974 y muestran el con
 <ul>
 <li>Prueba 1</li>
 </ul>
-<div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb171-1" title="1"><span class="kw">chisq.test</span>(vsAm) </a></code></pre></div>
+<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb177-1" title="1"><span class="kw">chisq.test</span>(vsAm) </a></code></pre></div>
 <ul>
 <li>Prueba 2</li>
 </ul>
-<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb172-1" title="1"><span class="kw">chisq.test</span>(Gearcarb) </a></code></pre></div>
+<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb178-1" title="1"><span class="kw">chisq.test</span>(Gearcarb) </a></code></pre></div>
 <ul>
 <li>Prueba 3</li>
 </ul>
-<div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb173-1" title="1"><span class="kw">chisq.test</span>(cylGear) </a></code></pre></div>
+<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb179-1" title="1"><span class="kw">chisq.test</span>(cylGear) </a></code></pre></div>
 
 </div>
 </div>

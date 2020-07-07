@@ -24,6 +24,10 @@ Para instalar Rstudio, es necesario descargar y ejecutar alguno de los instalado
 
 Al abrir Rstudio se visualiza lo siguiente
 
+```{r echo=FALSE}
+library(knitr)
+include_graphics("img/rstudio-1.png") 
+```
 
 #### Fuente
 * Es en donde se escribe el código para documentarlo en scripts. 
@@ -34,11 +38,21 @@ Al abrir Rstudio se visualiza lo siguiente
 # Este es un comentario
 ```
 
+```{r echo=FALSE}
+library(knitr)
+include_graphics("img/rstudio-2.png") 
+```
+
+
 #### Consola
 
 * Es la parte más importante porque es donde nuestro código es interpretado. 
 * Podemos escribir directamente aquí nuestro código y será ejecutado. 
 
+```{r echo=FALSE}
+library(knitr)
+include_graphics("img/rstudio-3.png") 
+```
 
 
 #### Entorno, Historia, Conexiones y Git
@@ -46,7 +60,10 @@ Al abrir Rstudio se visualiza lo siguiente
 * También desde allí podemos importar bases de datos. 
 * Para limpiar nuestro entorno de trabajo podemos hacerlo con el símbolo de la escobita. 
 
-
+```{r echo=FALSE}
+library(knitr)
+include_graphics("img/rstudio-4.png") 
+```
 
 #### Archivos, Gráficos, Paquetes, Ayuda, Visor
 * En esta sección podemos ver los archivos la carpeta que funciona como entorno de trabajo. 
@@ -54,6 +71,11 @@ Al abrir Rstudio se visualiza lo siguiente
 - Se ofrece una lista de paquetes instalados y cargados en nuestro entorno de Rstudio. 
 * La ayuda nos permite ver la documentación de una determinada librería. 
 * Finalmente en la pestaña _Viewer_ podemos visualizar documentos de texto o interactivos que realicemos. 
+
+```{r echo=FALSE}
+library(knitr)
+include_graphics("img/rstudio-5.png") 
+```
 
 ## Conceptos básicos en el uso de R
 
@@ -179,14 +201,10 @@ mimarco
 ```
 
 
-#####  Bibliografía
+## Bibliografía
 
 - R para principiantes. _Juan Bosco Mendoza Vega_
 Disponible en http://bit.ly/2Zg0I3M
 - El arte de programar en R _Julio Sergio Santana & Efraín Mateos Farfán_ Disponible en http://bit.ly/2N2Y1Y8 
 
-
-
-
-
-
+  
