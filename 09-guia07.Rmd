@@ -1,4 +1,4 @@
-# Guía 7 Pruebas de Chi-Cuadrado
+# Guía 7 - Pruebas de Chi-Cuadrado
 
 ## Ejercicio 1
 

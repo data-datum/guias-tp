@@ -1,4 +1,4 @@
-# Guía 9 Análisis de la Varianza - Diseño de un factor
+# Guía 9 - Análisis de la Varianza - Diseño de un factor
 
 ## Ejercicio 1
 
