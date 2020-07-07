@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 9 Cálculo de intervalos de confianza para la media de una población con desviación típica conocida | Probabilidad y Estadística</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 9 Cálculo de intervalos de confianza para la media de una población con desviación típica conocida | Probabilidad y Estadística" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 9 Cálculo de intervalos de confianza para la media de una población con desviación típica conocida | Probabilidad y Estadística" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Ingeniería Industrial" />
+
+
+<meta name="date" content="2020-07-06" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="guía-5-probabilidades-teoría-de-la-estimación.html"/>
+<link rel="next" href="guía-6.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Probabilidad y Estadística</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prefacio</a></li>
+<li class="chapter" data-level="2" data-path="estadística.html"><a href="estadística.html"><i class="fa fa-check"></i><b>2</b> Estadística</a><ul>
+<li class="chapter" data-level="2.1" data-path="estadística.html"><a href="estadística.html#definiciones"><i class="fa fa-check"></i><b>2.1</b> Definiciones</a></li>
+<li class="chapter" data-level="2.2" data-path="estadística.html"><a href="estadística.html#bibliografía"><i class="fa fa-check"></i><b>2.2</b> Bibliografía</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="instalación-de-r-y-rstudio.html"><a href="instalación-de-r-y-rstudio.html"><i class="fa fa-check"></i><b>3</b> Instalación de R y Rstudio</a><ul>
+<li class="chapter" data-level="3.1" data-path="instalación-de-r-y-rstudio.html"><a href="instalación-de-r-y-rstudio.html#pasos"><i class="fa fa-check"></i><b>3.1</b> Pasos</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="guía-1.html"><a href="guía-1.html"><i class="fa fa-check"></i><b>4</b> Guía 1</a><ul>
+<li class="chapter" data-level="4.1" data-path="guía-1.html"><a href="guía-1.html#problema-1"><i class="fa fa-check"></i><b>4.1</b> Problema 1</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="guía-2.html"><a href="guía-2.html"><i class="fa fa-check"></i><b>5</b> Guía 2</a></li>
+<li class="chapter" data-level="6" data-path="guía-3.html"><a href="guía-3.html"><i class="fa fa-check"></i><b>6</b> Guía 3</a><ul>
+<li class="chapter" data-level="6.1" data-path="guía-3.html"><a href="guía-3.html#problema-1-1"><i class="fa fa-check"></i><b>6.1</b> Problema 1</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="guía-4-probabilidades-distribuciones-de-probabilidad-.html"><a href="guía-4-probabilidades-distribuciones-de-probabilidad-.html"><i class="fa fa-check"></i><b>7</b> Guía 4 - Probabilidades. Distribuciones de probabilidad.</a><ul>
+<li class="chapter" data-level="7.1" data-path="guía-4-probabilidades-distribuciones-de-probabilidad-.html"><a href="guía-4-probabilidades-distribuciones-de-probabilidad-.html#ejercicio-1"><i class="fa fa-check"></i><b>7.1</b> Ejercicio 1</a></li>
+<li class="chapter" data-level="7.2" data-path="guía-4-probabilidades-distribuciones-de-probabilidad-.html"><a href="guía-4-probabilidades-distribuciones-de-probabilidad-.html#ejercicio-2"><i class="fa fa-check"></i><b>7.2</b> Ejercicio 2</a></li>
+<li class="chapter" data-level="7.3" data-path="guía-4-probabilidades-distribuciones-de-probabilidad-.html"><a href="guía-4-probabilidades-distribuciones-de-probabilidad-.html#ejercicio-3"><i class="fa fa-check"></i><b>7.3</b> Ejercicio 3</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="guía-4-probabilidades-distribuciones-de-probabilidad-.html"><a href="guía-4-probabilidades-distribuciones-de-probabilidad-.html#en-r"><i class="fa fa-check"></i><b>7.3.1</b> En R</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="guía-4-probabilidades-distribuciones-de-probabilidad-.html"><a href="guía-4-probabilidades-distribuciones-de-probabilidad-.html#ejercicio-4"><i class="fa fa-check"></i><b>7.4</b> Ejercicio 4</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="guía-4-probabilidades-distribuciones-de-probabilidad-.html"><a href="guía-4-probabilidades-distribuciones-de-probabilidad-.html#en-r-1"><i class="fa fa-check"></i><b>7.4.1</b> En R</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="guía-4-probabilidades-distribuciones-de-probabilidad-.html"><a href="guía-4-probabilidades-distribuciones-de-probabilidad-.html#ejercicio-5"><i class="fa fa-check"></i><b>7.5</b> Ejercicio 5</a><ul>
+<li class="chapter" data-level="7.5.1" data-path="guía-4-probabilidades-distribuciones-de-probabilidad-.html"><a href="guía-4-probabilidades-distribuciones-de-probabilidad-.html#en-r-2"><i class="fa fa-check"></i><b>7.5.1</b> En R</a></li>
+<li class="chapter" data-level="7.5.2" data-path="guía-4-probabilidades-distribuciones-de-probabilidad-.html"><a href="guía-4-probabilidades-distribuciones-de-probabilidad-.html#ejercicio-6"><i class="fa fa-check"></i><b>7.5.2</b> Ejercicio 6</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="guía-4-probabilidades-distribuciones-de-probabilidad-.html"><a href="guía-4-probabilidades-distribuciones-de-probabilidad-.html#ejercicio-6-1"><i class="fa fa-check"></i><b>7.6</b> Ejercicio 6</a><ul>
+<li class="chapter" data-level="7.6.1" data-path="guía-4-probabilidades-distribuciones-de-probabilidad-.html"><a href="guía-4-probabilidades-distribuciones-de-probabilidad-.html#en-r-3"><i class="fa fa-check"></i><b>7.6.1</b> En R</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="guía-5-probabilidades-teoría-de-la-estimación.html"><a href="guía-5-probabilidades-teoría-de-la-estimación.html"><i class="fa fa-check"></i><b>8</b> Guía 5 - Probabilidades. Teoría de la Estimación</a><ul>
+<li class="chapter" data-level="8.1" data-path="guía-5-probabilidades-teoría-de-la-estimación.html"><a href="guía-5-probabilidades-teoría-de-la-estimación.html#ejercicio-1-1"><i class="fa fa-check"></i><b>8.1</b> Ejercicio 1</a></li>
+<li class="chapter" data-level="8.2" data-path="guía-5-probabilidades-teoría-de-la-estimación.html"><a href="guía-5-probabilidades-teoría-de-la-estimación.html#ejercicio-2-1"><i class="fa fa-check"></i><b>8.2</b> Ejercicio 2</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="guía-5-probabilidades-teoría-de-la-estimación.html"><a href="guía-5-probabilidades-teoría-de-la-estimación.html#en-r-4"><i class="fa fa-check"></i><b>8.2.1</b> En R</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="cálculo-de-intervalos-de-confianza-para-la-media-de-una-población-con-desviación-típica-conocida.html"><a href="cálculo-de-intervalos-de-confianza-para-la-media-de-una-población-con-desviación-típica-conocida.html"><i class="fa fa-check"></i><b>9</b> Cálculo de intervalos de confianza para la media de una población con desviación típica conocida</a><ul>
+<li class="chapter" data-level="9.1" data-path="cálculo-de-intervalos-de-confianza-para-la-media-de-una-población-con-desviación-típica-conocida.html"><a href="cálculo-de-intervalos-de-confianza-para-la-media-de-una-población-con-desviación-típica-conocida.html#lo-primero-es-fijar-un-nivel-de-confianza-1-alfa-siendo-alfa-la-máxima-probabilidad-aceptada-de-cometer-un-error."><i class="fa fa-check"></i><b>9.1</b> 1. Lo primero es fijar un nivel de confianza 1-alfa (siendo alfa la máxima probabilidad aceptada de cometer un error).</a></li>
+<li class="chapter" data-level="9.2" data-path="cálculo-de-intervalos-de-confianza-para-la-media-de-una-población-con-desviación-típica-conocida.html"><a href="cálculo-de-intervalos-de-confianza-para-la-media-de-una-población-con-desviación-típica-conocida.html#ejercicio-3-1"><i class="fa fa-check"></i><b>9.2</b> Ejercicio 3</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="cálculo-de-intervalos-de-confianza-para-la-media-de-una-población-con-desviación-típica-conocida.html"><a href="cálculo-de-intervalos-de-confianza-para-la-media-de-una-población-con-desviación-típica-conocida.html#en-r-5"><i class="fa fa-check"></i><b>9.2.1</b> En R</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="cálculo-de-intervalos-de-confianza-para-la-media-de-una-población-con-desviación-típica-conocida.html"><a href="cálculo-de-intervalos-de-confianza-para-la-media-de-una-población-con-desviación-típica-conocida.html#ejercicio-4-1"><i class="fa fa-check"></i><b>9.3</b> Ejercicio 4</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="guía-6.html"><a href="guía-6.html"><i class="fa fa-check"></i><b>10</b> Guía 6</a><ul>
+<li class="chapter" data-level="10.1" data-path="guía-6.html"><a href="guía-6.html#problema-1-2"><i class="fa fa-check"></i><b>10.1</b> Problema 1</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="guía-7-pruebas-de-chi-cuadrado.html"><a href="guía-7-pruebas-de-chi-cuadrado.html"><i class="fa fa-check"></i><b>11</b> Guía 7 Pruebas de Chi-Cuadrado</a><ul>
+<li class="chapter" data-level="11.1" data-path="guía-7-pruebas-de-chi-cuadrado.html"><a href="guía-7-pruebas-de-chi-cuadrado.html#ejercicio-1-2"><i class="fa fa-check"></i><b>11.1</b> Ejercicio 1</a></li>
+<li class="chapter" data-level="11.2" data-path="guía-7-pruebas-de-chi-cuadrado.html"><a href="guía-7-pruebas-de-chi-cuadrado.html#ejercicio-2-2"><i class="fa fa-check"></i><b>11.2</b> Ejercicio 2</a></li>
+<li class="chapter" data-level="11.3" data-path="guía-7-pruebas-de-chi-cuadrado.html"><a href="guía-7-pruebas-de-chi-cuadrado.html#ejercicio-3-2"><i class="fa fa-check"></i><b>11.3</b> Ejercicio 3</a></li>
+<li class="chapter" data-level="11.4" data-path="guía-7-pruebas-de-chi-cuadrado.html"><a href="guía-7-pruebas-de-chi-cuadrado.html#ejercicio-4-2"><i class="fa fa-check"></i><b>11.4</b> Ejercicio 4</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="guía-8-correlación-simple-regresión-lineal-simple.html"><a href="guía-8-correlación-simple-regresión-lineal-simple.html"><i class="fa fa-check"></i><b>12</b> Guía 8 - Correlación Simple - Regresión Lineal Simple</a><ul>
+<li class="chapter" data-level="12.1" data-path="guía-8-correlación-simple-regresión-lineal-simple.html"><a href="guía-8-correlación-simple-regresión-lineal-simple.html#ejercicio-1-3"><i class="fa fa-check"></i><b>12.1</b> Ejercicio 1</a></li>
+<li class="chapter" data-level="12.2" data-path="guía-8-correlación-simple-regresión-lineal-simple.html"><a href="guía-8-correlación-simple-regresión-lineal-simple.html#ejercicio-2-3"><i class="fa fa-check"></i><b>12.2</b> Ejercicio 2</a></li>
+<li class="chapter" data-level="12.3" data-path="guía-8-correlación-simple-regresión-lineal-simple.html"><a href="guía-8-correlación-simple-regresión-lineal-simple.html#ejercicio-3-3"><i class="fa fa-check"></i><b>12.3</b> Ejercicio 3</a></li>
+<li class="chapter" data-level="12.4" data-path="guía-8-correlación-simple-regresión-lineal-simple.html"><a href="guía-8-correlación-simple-regresión-lineal-simple.html#ejercicio-4-3"><i class="fa fa-check"></i><b>12.4</b> Ejercicio 4</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="guía-9-análisis-de-la-varianza-diseño-de-un-factor.html"><a href="guía-9-análisis-de-la-varianza-diseño-de-un-factor.html"><i class="fa fa-check"></i><b>13</b> Guía 9 Análisis de la Varianza - Diseño de un factor</a><ul>
+<li class="chapter" data-level="13.1" data-path="guía-9-análisis-de-la-varianza-diseño-de-un-factor.html"><a href="guía-9-análisis-de-la-varianza-diseño-de-un-factor.html#ejercicio-1-4"><i class="fa fa-check"></i><b>13.1</b> Ejercicio 1</a></li>
+<li class="chapter" data-level="13.2" data-path="guía-9-análisis-de-la-varianza-diseño-de-un-factor.html"><a href="guía-9-análisis-de-la-varianza-diseño-de-un-factor.html#ejercicio-2-4"><i class="fa fa-check"></i><b>13.2</b> Ejercicio 2</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Probabilidad y Estadística</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="cálculo-de-intervalos-de-confianza-para-la-media-de-una-población-con-desviación-típica-conocida" class="section level1">
+<h1><span class="header-section-number">Capítulo 9</span> Cálculo de intervalos de confianza para la media de una población con desviación típica conocida</h1>
+<p>Supongamos que queremos calcular un intervalo de confianza para una media poblacional sabiendo que la media muestral es de 32 y la desviación típica poblacional de 6. La muestra es de 50 individuos.</p>
+<p>Los pasos para calcular los intervalos de confianza son:</p>
+<div id="lo-primero-es-fijar-un-nivel-de-confianza-1-alfa-siendo-alfa-la-máxima-probabilidad-aceptada-de-cometer-un-error." class="section level2">
+<h2><span class="header-section-number">9.1</span> 1. Lo primero es fijar un nivel de confianza 1-alfa (siendo alfa la máxima probabilidad aceptada de cometer un error).</h2>
+<p>La probabilidad de que nuestra estimación esté dentro de ciertos valores es fijada de antemano. Normalmente los valores de confianza son del 90%, 95% o 99%.</p>
+<p><em>Para este ejercicio fijamos un nivel de confianza del 90%</em></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Cálculo del valor de Z</li>
+</ol>
+<p>Siendo z(alfa/2) , el cuantil de la distribución normal estándar que arrastra una probabilidad de alfa/2, con alfa nivel de significancia establecido.</p>
+<p>si yo deseo tener un nivel de confianza del 90%, entonces alfa va a ser del 10% y alfa/2 va a ser 5%.</p>
+<p><img src="img/normal.png" width="100%" /></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">qnorm</span>(<span class="fl">0.05</span>,<span class="dv">0</span>,<span class="dv">1</span>) <span class="co">#el valor de alfa/2=0.05, media=0 y sd=1</span></a></code></pre></div>
+<pre><code>## [1] -1.644854</code></pre>
+<p>3.Cálculo de los límites del intervalo.</p>
+<p>Está dado por la siguiente fórmula</p>
+<p><img src="img/intervaloZ.png" width="50%" /></p>
+<p>Resolvemos</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">n &lt;-<span class="st"> </span><span class="dv">50</span>    <span class="co"># El tamaño válido de la muestra</span></a>
+<a class="sourceLine" id="cb5-2" title="2">media &lt;-<span class="st"> </span><span class="dv">32</span> <span class="co"># la media </span></a>
+<a class="sourceLine" id="cb5-3" title="3">desv &lt;-<span class="st"> </span><span class="dv">6</span>  <span class="co"># La desviación estándar. Datos históricos</span></a>
+<a class="sourceLine" id="cb5-4" title="4">nivelconfianza =<span class="st"> </span><span class="fl">0.90</span></a></code></pre></div>
+<p>utilizo la formula</p>
+<p><img src="img/errorZ.png" width="50%" /></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1">error.est &lt;-<span class="st"> </span>desv<span class="op">/</span><span class="kw">sqrt</span>(n) <span class="co"># Calculamos el error estándar</span></a>
+<a class="sourceLine" id="cb6-2" title="2">margen.error &lt;-<span class="st"> </span><span class="fl">1.644854</span> <span class="op">*</span><span class="st"> </span>error.est <span class="co"># nivel de confianza de 90% </span></a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1">lim.inf &lt;-<span class="st"> </span>media <span class="op">-</span><span class="st"> </span>margen.error <span class="co"># Límite inferior del intervalo</span></a>
+<a class="sourceLine" id="cb7-2" title="2">lim.inf</a></code></pre></div>
+<pre><code>## [1] 30.6043</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1">lim.sup &lt;-<span class="st"> </span>media <span class="op">+</span><span class="st"> </span>margen.error <span class="co"># Límite superior del intervalo</span></a>
+<a class="sourceLine" id="cb9-2" title="2">lim.sup</a></code></pre></div>
+<pre><code>## [1] 33.3957</code></pre>
+<ul>
+<li>Cálculo de intervalos de confianza para la media de una población para muestras pequeñas o desviación típica desconocida</li>
+</ul>
+<p>Cuando no conocemos la desviación típica de la población o la muestra es pequeña (n&lt;30), no podemos estimar el error estándar con el desvío típico debido a que no se cumple el teorema central del límite. En estas ocasiones usaremos una nueva distribución de probabilidad llamada t de student.
+Algunas características de la distribución t de student son:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Está centra en cero (al igual que Z).</li>
+<li>Es simétrica.</li>
+<li>Es menor en la media y mas alta en los extremos que una distribución normal.
+Tiene proporcionalmente mayor parte de su área en los extremos que la distribución normal.
+Existe una distribución t para cada tamaño de la muestra, por lo que “Existe una distribución para cada uno de los grados de libertad” Los grados de libertad se calculan con la siguiente fórmula:
+GL=n – 1</li>
+</ol>
+<p>Al igual que para el resto de las distribuciones, podemos calcular la función densidad, acumulada y quantil de la distribución t de student a través de R con las siguientes fórmulas:</p>
+<ul>
+<li>dt(x, df) para la función densidad</li>
+<li>pt(q, df) para la función acumulada</li>
+<li>qt(p, df) para calcular los cuantiles</li>
+</ul>
+<p><em>Cálculo del margen del error para para muestras pequeñas o desviación típica desconocida</em></p>
+<p>Utilizamos la siguiente fórmula</p>
+<p><img src="img/errorT.png" width="50%" /></p>
+<p>t(alfa/2) lo calculamos con la función qt(probabilidad, grados de libertad)</p>
+<p>Por ejemplo para un nivel de confianza de 0.9, alfa/2 va a ser 0.05 y una muestra de tamaño 10</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1"><span class="kw">qt</span>(<span class="fl">0.05</span>,<span class="dv">9</span>)</a></code></pre></div>
+<pre><code>## [1] -1.833113</code></pre>
+<p>t(alfa/2)=1.833</p>
+<p>Para armar el intervalo de confianza usamos la siguiente fórmula:</p>
+<p><img src="img/intervaloT.png" width="50%" /></p>
+</div>
+<div id="ejercicio-3-1" class="section level2">
+<h2><span class="header-section-number">9.2</span> Ejercicio 3</h2>
+<p>Se ha obtenido una muestra de 15 vendedores de una Editorial para estimar el valor medio de las ventas por trabajador en la Empresa. La media y varianza de la muestra (en miles de euros) son 5 y 2, respectivamente.
+a. Determine el intervalo de confianza para la venta media por trabajador en la Editorial al 99 %.</p>
+<div id="en-r-5" class="section level3">
+<h3><span class="header-section-number">9.2.1</span> En R</h3>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1">n &lt;-<span class="st"> </span><span class="dv">15</span>   <span class="co"># El tamaño válido de la muestra</span></a>
+<a class="sourceLine" id="cb13-2" title="2">media &lt;-<span class="st"> </span><span class="dv">5</span> <span class="co"># la media </span></a>
+<a class="sourceLine" id="cb13-3" title="3">nivelconfianza =<span class="st"> </span><span class="fl">0.99</span></a>
+<a class="sourceLine" id="cb13-4" title="4">desv &lt;-<span class="st"> </span><span class="kw">sqrt</span>(<span class="dv">2</span>)  </a></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1"><span class="co">#En vez de _qnorm_ utilizo _qt_ en este caso de muestras pequeñas, </span></a>
+<a class="sourceLine" id="cb14-2" title="2"><span class="co">#estoy trabajando con la distribución t de student</span></a>
+<a class="sourceLine" id="cb14-3" title="3"><span class="kw">qt</span>(<span class="fl">0.005</span>,<span class="dv">14</span>) <span class="co"># 0.005 y 14 grados de libertad</span></a></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" title="1">error.est &lt;-<span class="st"> </span>desv<span class="op">/</span><span class="kw">sqrt</span>(n) <span class="co"># Calculamos el error estándar</span></a>
+<a class="sourceLine" id="cb15-2" title="2">margen.error &lt;-<span class="st"> </span><span class="fl">2.97</span> <span class="op">*</span><span class="st"> </span>error.est <span class="co"># nivel de confianza de 99% </span></a></code></pre></div>
+<p>Cálculo de límite inferior</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1">lim.inf &lt;-<span class="st"> </span>media <span class="op">-</span><span class="st"> </span>margen.error <span class="co"># Límite inferior del intervalo</span></a>
+<a class="sourceLine" id="cb16-2" title="2">lim.inf</a></code></pre></div>
+<p>Cálculo el límite superior</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" title="1">lim.sup &lt;-<span class="st"> </span>media <span class="op">+</span><span class="st"> </span>margen.error <span class="co"># Límite superior del intervalo</span></a>
+<a class="sourceLine" id="cb17-2" title="2">lim.sup</a></code></pre></div>
+</div>
+</div>
+<div id="ejercicio-4-1" class="section level2">
+<h2><span class="header-section-number">9.3</span> Ejercicio 4</h2>
+<p>Una muestra de 140 observaciones arrojó un promedio=30 y un desviación típica=6</p>
+<ol style="list-style-type: lower-alpha">
+<li>Hallar los límites de confianza del 95% para la media</li>
+<li>Considere que la muestra fue de 25 observaciones y hallar el intervalo de confianza para media con el 95%.</li>
+<li>¿Qué diferencia encuentra entre ambos intervalos? Redacte su interpretación.</li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="guía-5-probabilidades-teoría-de-la-estimación.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="guía-6.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["guias-tp.pdf", "guias-tp.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
