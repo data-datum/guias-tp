@@ -2,3 +2,6 @@
 
 ## Pasos
 
+## Partes de Rstudio
+
+## Tipos de objetos en R

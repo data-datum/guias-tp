@@ -251,7 +251,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Cargar los siguientes datos, correspondientes al consumo de bebida gaseosa a nivel mundial, en un archivo Excel (utilice una columna para la variable país y otra para la variable consumo en litros per cápita):</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">gaseosas&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;gaseosas.csv&quot;</span>)</a></code></pre></div>
 <table>
 <caption><span id="tab:tabla">Table 4.1: </span>Consumo de gaseosas a nivel mundial</caption>
 <thead>
@@ -316,7 +315,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tbody>
 </table>
 <ul>
-<li>Importar los datos en R.</li>
+<li>Importar los datos en R, para ello utilice la siguiente función:</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">gaseosas&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;gaseosas.csv&quot;</span>)</a></code></pre></div>
+<ul>
 <li>Indicar cuáles son los países de mayor y menor consumo de gaseosa.</li>
 <li><p>Ordenar los datos de manera ascendente.</p></li>
 <li><p>Elaborar un gráfico de barras por países ¿Qué conclusiones puede realizar con respecto al consumo de gaseosa en los diferentes países? ¿Es posible visualizar grupos de países de similar consumo? ¿Cuáles serían esos grupos?</p></li>
@@ -384,6 +386,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
