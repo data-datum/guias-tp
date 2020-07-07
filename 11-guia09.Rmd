@@ -1,3 +1,118 @@
-# Guía 9
+# Guía 9 Análisis de la Varianza - Diseño de un factor
 
-## Problema 1
+## Ejercicio 1
+
+Un ingeniero está interesado en maximizar la resistencia a la tensión, de una nueva fibra sintética, que se empleará en la manufactura de tela para camisas de hombre. El ingeniero abe por experiencia que la resistencia está influida por el porcentaje de algodón presente en la fibra por lo que decide probar muestras a cinco niveles de porcentaje de algodón: 15, 20, 25, 30 y 35%. Con cinco repeticiones por cada nivel de contenido de algodón. 
+Las observaciones obtenidas acerca de la resistencia a la tensión son:
+
+||% de Algodón |  Observaciones ||
+|------|-----|-----|-----|-----|-----|-----|
+|| 15  | 7  | 7  | 15 | 11 | 9  ||
+|| 20  | 12 | 17 | 12 | 18 | 18 ||
+|| 25  | 14 | 18 | 18 | 19 | 19 ||
+|| 30  | 19 | 25 | 22 | 19 | 23 ||
+|| 35  | 7  | 10 | 11 | 15 | 11 ||
+
+
+
+a. Confeccionar el croquis de campo con la distribución de los tratamientos en las unidades experimentales. 
+b. Plantear la hipótesis nula y la alternativa. 
+c. Realizar un gráfico de boxplot para visualizar como se distribuyen los valores obtenidos en el estudio.
+d. Realizar un análisis de la varianza con un nivel de significancia alfa=5%.
+e. Si corresponde realizar la prueba de Tukey e interpretar los resultados. 
+
+
+```{r}
+#importamos los datos con "import dataset" el set de datos 'algodon.csv'
+```
+
+En el set de datos:
+
+* Grupo1:  15 % de algodón
+* Grupo2:  20 % de algodón
+* Grupo3:  25 % de algodón
+* Grupo4:  30 % de algodón
+* Grupo5:  35 % de algodón
+```{r include=FALSE}
+algodon <- read.csv("~/Documentos/PROB&STATS/algodon.csv")
+```
+
+```{r}
+#controlamos que haya sido importado el dataset de manera correcta
+head(algodon)
+```
+
+```{r eval=FALSE}
+#visualizamos como se distribuyen los valores para cada grupo
+boxplot(muestras~grupo, data=algodon)
+```
+
+```{r eval=FALSE}
+aov(muestras~grupo, data=algodon)
+```
+
+```{r eval=FALSE}
+anova_algodon<-aov(muestras~grupo, data=algodon)
+summary(anova_algodon)
+```
+
+```{r eval=FALSE}
+#prueba de Tukey
+TukeyHSD(anova_algodon)
+```
+
+
+
+
+## Ejercicio 2
+
+La estructura financiera de una empresa consiste en la forma en que sus activos se dividen en capital y deuda, y el apalancamiento financiero se refiere al porcentaje de activos financiados con endeudamiento. 
+En el artículo The Effect of Financial Leverage on Return, Tai Ma, de Virginia Tech, afirma que es posible utilizar el apalancamiento financiero para incrementar la tasa de rendimiento sobre el capital. Dicho de otra manera, los accionistas pueden recibir rendimientos más elevados sobre el capital propio con la misma cantidad de inversión si usan apalancamiento financiero. Los siguientes datos muestran las tasas de rendimiento sobre el capital utilizando 3 niveles distintos de apalancamiento financiero, así como un nivel de control (deuda igual a cero) para 24 empresas seleccionadas al azar. 
+
+|| Control |  Bajo  |  Medio |  Alto ||
+|------|-----|-----|-----|-----|-----|-----|
+|| 2.1  | 6.2 | 9.6 | 10.3 ||
+|| 5.6  | 4.0 | 8.0 | 6.9  ||
+|| 3.0  | 8.4 | 5.5 | 7.8  ||
+|| 7.8  | 2.8 | 12.6 | 5.8 ||
+|| 5.2  | 4.2 | 7.0 | 7.2  ||
+|| 2.6  | 5.0 | 7.8 | 12.0 ||
+
+Indique:
+  
+a. Objetivo de la investigación 
+b. Realizar un gráfico de boxplot para visualizar como se distribuyen los valores obtenidos en el estudio.
+c. Haga el análisis de varianza a un nivel de significancia de 0.05. Liste el modelo y los supuestos asociados. d. Informe el p-valor y aporte las conclusiones estadísticas al problema, indicando la hipótesis nula y la alternativa. 
+
+
+```{r}
+#En primer lugar vamos a ingresar los datos
+#recordar como se ingresa con import dataset
+#llamamos al objeto ingresado "empresa"
+```
+
+```{r include=FALSE}
+empresa<-read.csv("~/Documentos/PROB&STATS/empresa.csv")
+```
+
+```{r}
+#corroboramos que el dataset fue importado correctamente
+head(empresa)
+```
+
+```{r eval=FALSE}
+#visualizamos como se distribuyen los valores para cada grupo
+boxplot(empresa ~ apalancamiento, data = empresa)
+```
+
+
+```{r eval=FALSE}
+aov(empresa ~ apalancamiento, data = empresa)
+```
+
+```{r eval=FALSE}
+anova_emp<-aov(empresa ~ apalancamiento, data = empresa)
+summary(anova_emp)
+```
+
+
