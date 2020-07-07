@@ -251,10 +251,73 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Cargar los siguientes datos, correspondientes al consumo de bebida gaseosa a nivel mundial, en un archivo Excel (utilice una columna para la variable país y otra para la variable consumo en litros per cápita):</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">gaseosas&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;~/data/gaseosas.csv&quot;</span>, <span class="dt">sep=</span><span class="st">&quot;;&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">gaseosas&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;gaseosas.csv&quot;</span>)</a></code></pre></div>
+<table>
+<caption><span id="tab:tabla">Table 4.1: </span>Consumo de gaseosas a nivel mundial</caption>
+<thead>
+<tr class="header">
+<th align="center">pais</th>
+<th align="center">consumo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Arabia Saudita</td>
+<td align="center">79.5</td>
+</tr>
+<tr class="even">
+<td align="center">Uruguay</td>
+<td align="center">87.1</td>
+</tr>
+<tr class="odd">
+<td align="center">Alemania</td>
+<td align="center">76.3</td>
+</tr>
+<tr class="even">
+<td align="center">Argentina</td>
+<td align="center">131.1</td>
+</tr>
+<tr class="odd">
+<td align="center">Bélgica</td>
+<td align="center">88.5</td>
+</tr>
+<tr class="even">
+<td align="center">Perú</td>
+<td align="center">55.9</td>
+</tr>
+<tr class="odd">
+<td align="center">Irlanda</td>
+<td align="center">74.4</td>
+</tr>
+<tr class="even">
+<td align="center">Colombia</td>
+<td align="center">65.8</td>
+</tr>
+<tr class="odd">
+<td align="center">Noruega</td>
+<td align="center">91.2</td>
+</tr>
+<tr class="even">
+<td align="center">Chile</td>
+<td align="center">121.3</td>
+</tr>
+<tr class="odd">
+<td align="center">Estados Unidos</td>
+<td align="center">112.1</td>
+</tr>
+<tr class="even">
+<td align="center">Brasil</td>
+<td align="center">89.9</td>
+</tr>
+<tr class="odd">
+<td align="center">México</td>
+<td align="center">119.4</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li>Importar los datos en R.</li>
-<li><p>Indicar cuáles son los países de mayor y menor consumo de gaseosa.</p></li>
+<li>Indicar cuáles son los países de mayor y menor consumo de gaseosa.</li>
 <li><p>Ordenar los datos de manera ascendente.</p></li>
 <li><p>Elaborar un gráfico de barras por países ¿Qué conclusiones puede realizar con respecto al consumo de gaseosa en los diferentes países? ¿Es posible visualizar grupos de países de similar consumo? ¿Cuáles serían esos grupos?</p></li>
 <li><p>En herramientas gráficas modificar la escala del eje de 0 a 300 ¿Puede observar lo mismo que en punto anterior?</p></li>
@@ -321,20 +384,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

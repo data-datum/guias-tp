@@ -4,20 +4,16 @@
 
 - Cargar los siguientes datos, correspondientes al consumo de bebida gaseosa a nivel mundial, en un archivo Excel (utilice una columna para la variable país y otra para la variable consumo en litros per cápita):
 
-```{r eval=FALSE}
-gaseosas<-read.csv("~/data/gaseosas.csv", sep=";")
+```{r ingreso-dato}
+gaseosas<-read.csv("gaseosas.csv")
 ```
   
-```{r, tidy=FALSE, echo=FALSE, eval=FALSE}
-library(kableExtra)
-library(magrittr)
-kable(gaseosas) %>%
-  kable_styling(bootstrap_options = "striped", full_width = F)
+```{r tabla, echo=FALSE}
+knitr::kable(gaseosas, caption = "Consumo de gaseosas a nivel mundial", align="c")
 ```
 
 - Importar los datos en R. 
 - Indicar cuáles son los países de mayor y menor consumo de gaseosa.
-
 - Ordenar los datos de manera ascendente.
 
 - Elaborar un gráfico de barras por países ¿Qué conclusiones puede realizar con respecto al consumo de gaseosa en los diferentes países? ¿Es posible visualizar grupos de países de similar consumo? ¿Cuáles serían esos grupos?
