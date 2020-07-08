@@ -37,9 +37,48 @@ knitr::kable(tabla, align="c", caption="Lugares de procedencia de empleados")
 ```
 
 
-* Construir una tabla de frecuencias absoluta y redactar 2 (dos) oraciones con lo más relevante que pueda observar.
+* Construir una tabla de frecuencias absoluta y redactar 3 (tres) oraciones con lo más relevante que pueda observar.
+
+En primer lugar vamos a limpiar el entorno de R
+```{r eval=FALSE}
+rm(list=ls())
+```
+
+Ingreso la base de datos
+
+```{r }
+empleados<-c("ituzaingo", "beron_de_astrada", "goya", "capital", "mercedes", 
+             "mercedes", "santo_tome", "beron_de_astrada", "san_cosme", "ituzaingo",
+             "capital", "capital", "capital", "mercedes", "mercedes",
+             "capital", "curuzu_cuatia", "mercedes", "capital", "curuzu_cuatia",
+             "santo_tome", "itati", "alvear", "capital", "alvear",
+             "curuzu_cuatia", "mercedes", "goya", "esquina", "ituzaingo",
+             "ituzaingo", "esquina", "capital", "itati", "goya",
+             "itati", "capital", "goya", "goya", "capital")
+```
+
+Creo una tabla de frecuencias absolutas con la función `table()`
+```{r }
+table(empleados)
+```
+
+
 * Realizar una tabla de frecuencias relativas.
+
+```{r }
+tabla<-table(empleados) #guardo en un objeto de R
+prop.table(tabla) 
+```
+
+__La función prop.table() recibe como argumento una tabla de frecuencias absolutas, por eso guardo esa información en un objeto de R, para proceder de manera ordenada y correcta__
+
 * Realizar un gráfico de barras con la distribución por departamento. 
+
+```{r }
+barplot(tabla, las=2)
+```
+
+__El argumento las=2, me permite visualizar de manera correcta los nombres de los departamentos de Corrientes.__
 
 
 
@@ -70,25 +109,39 @@ knitr::kable(tabla, align="c", caption="Ganancia de peso en cerdos")
 
 
 * Confeccione una tabla de frecuencias absoluta e interprete los resultados.
-* Realice una tabla de frecuencias relativas. 
 
+Mediante la función c(), para crear un vector de valores numéricos en R. 
 
-A continuación se presentan el histograma, polígono de frecuencias y ojiva correspondientes a la tabla de distribuciones de frecuencias
-
-```{r echo=FALSE}
+```{r }
 cerdos<-c(30.2, 17.6, 34.3, 30.6, 33.4, 31.6, 52.1, 21.8, 30.1, 36.7,
           33.3, 53.1, 11.5, 21.5, 32.4, 40.1, 53.4, 40.9, 33.2, 32.7,
           29.0, 15.2, 12.2, 27.3, 29.5, 33.6, 32.6, 25.5, 19.7, 33.4, 
           20.5, 22.8, 50.9, 36.1, 30.5, 28.2, 20.3, 21.6, 34.3, 25.5)
 ```
 
-```{r eval=TRUE, echo=FALSE, fig.height=4, fig.width=5}
+Tabla de frecuencias
+```{r }
+table(cerdos)
+```
+
+* Realice una tabla de frecuencias relativas. 
+
+```{r }
+cerdos2<-table(cerdos)
+prop.table(cerdos2)
+```
+
+
+A continuación se presentan el histograma, polígono de frecuencias y ojiva correspondientes a la tabla de distribuciones de frecuencias
+
+
+```{r eval=TRUE, fig.height=4, fig.width=5}
 library(agricolae) #cargo la librería agricolae
 hist_cerdos<-hist(cerdos) #realizo un histograma
 polygon.freq(hist_cerdos) #realizo un polígono de frecuencias
 ```
 
-```{r echo=FALSE, fig.height=4, fig.width=5}
+```{r fig.height=4, fig.width=5}
 ogive.freq(hist_cerdos) 
 ```
 
