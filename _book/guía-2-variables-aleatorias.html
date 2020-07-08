@@ -368,31 +368,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb26-8" title="8">             <span class="st">&quot;itati&quot;</span>, <span class="st">&quot;capital&quot;</span>, <span class="st">&quot;goya&quot;</span>, <span class="st">&quot;goya&quot;</span>, <span class="st">&quot;capital&quot;</span>)</a></code></pre></div>
 <p>Creo una tabla de frecuencias absolutas con la función <code>table()</code></p>
 <div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" title="1"><span class="kw">table</span>(empleados)</a></code></pre></div>
-<pre><code>## empleados
-##           alvear beron_de_astrada          capital    curuzu_cuatia          esquina 
-##                2                2               10                3                2 
-##             goya            itati        ituzaingo         mercedes        san_cosme 
-##                5                3                4                6                1 
-##       santo_tome 
-##                2</code></pre>
 <ul>
-<li>Realizar una tabla de frecuencias relativas.</li>
+<li>Realizar una tabla de frecuencias relativas con función <code>prop.table()</code></li>
 </ul>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" title="1">tabla&lt;-<span class="kw">table</span>(empleados) <span class="co">#guardo en un objeto de R</span></a>
-<a class="sourceLine" id="cb29-2" title="2"><span class="kw">prop.table</span>(tabla) </a></code></pre></div>
-<pre><code>## empleados
-##           alvear beron_de_astrada          capital    curuzu_cuatia          esquina 
-##            0.050            0.050            0.250            0.075            0.050 
-##             goya            itati        ituzaingo         mercedes        san_cosme 
-##            0.125            0.075            0.100            0.150            0.025 
-##       santo_tome 
-##            0.050</code></pre>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" title="1">tabla&lt;-<span class="kw">table</span>(empleados) <span class="co">#guardo en un objeto de R</span></a>
+<a class="sourceLine" id="cb28-2" title="2"><span class="kw">prop.table</span>(tabla) </a></code></pre></div>
 <p><strong>La función prop.table() recibe como argumento una tabla de frecuencias absolutas, por eso guardo esa información en un objeto de R, para proceder de manera ordenada y correcta</strong></p>
 <ul>
 <li>Realizar un gráfico de barras con la distribución por departamento.</li>
 </ul>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" title="1"><span class="kw">barplot</span>(tabla, <span class="dt">las=</span><span class="dv">2</span>)</a></code></pre></div>
-<p><img src="guias-tp_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" title="1"><span class="kw">barplot</span>(tabla, <span class="dt">las=</span><span class="dv">2</span>)</a></code></pre></div>
 <p><strong>El argumento las=2, me permite visualizar de manera correcta los nombres de los departamentos de Corrientes.</strong></p>
 <div id="práctica-en-r" class="section level3">
 <h3><span class="header-section-number">5.2.1</span> Práctica en R</h3>
@@ -472,37 +457,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Confeccione una tabla de frecuencias absoluta e interprete los resultados.</li>
 </ul>
 <p>Mediante la función c(), para crear un vector de valores numéricos en R.</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" title="1">cerdos&lt;-<span class="kw">c</span>(<span class="fl">30.2</span>, <span class="fl">17.6</span>, <span class="fl">34.3</span>, <span class="fl">30.6</span>, <span class="fl">33.4</span>, <span class="fl">31.6</span>, <span class="fl">52.1</span>, <span class="fl">21.8</span>, <span class="fl">30.1</span>, <span class="fl">36.7</span>,</a>
-<a class="sourceLine" id="cb32-2" title="2">          <span class="fl">33.3</span>, <span class="fl">53.1</span>, <span class="fl">11.5</span>, <span class="fl">21.5</span>, <span class="fl">32.4</span>, <span class="fl">40.1</span>, <span class="fl">53.4</span>, <span class="fl">40.9</span>, <span class="fl">33.2</span>, <span class="fl">32.7</span>,</a>
-<a class="sourceLine" id="cb32-3" title="3">          <span class="fl">29.0</span>, <span class="fl">15.2</span>, <span class="fl">12.2</span>, <span class="fl">27.3</span>, <span class="fl">29.5</span>, <span class="fl">33.6</span>, <span class="fl">32.6</span>, <span class="fl">25.5</span>, <span class="fl">19.7</span>, <span class="fl">33.4</span>, </a>
-<a class="sourceLine" id="cb32-4" title="4">          <span class="fl">20.5</span>, <span class="fl">22.8</span>, <span class="fl">50.9</span>, <span class="fl">36.1</span>, <span class="fl">30.5</span>, <span class="fl">28.2</span>, <span class="fl">20.3</span>, <span class="fl">21.6</span>, <span class="fl">34.3</span>, <span class="fl">25.5</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" title="1">cerdos&lt;-<span class="kw">c</span>(<span class="fl">30.2</span>, <span class="fl">17.6</span>, <span class="fl">34.3</span>, <span class="fl">30.6</span>, <span class="fl">33.4</span>, <span class="fl">31.6</span>, <span class="fl">52.1</span>, <span class="fl">21.8</span>, <span class="fl">30.1</span>, <span class="fl">36.7</span>,</a>
+<a class="sourceLine" id="cb30-2" title="2">          <span class="fl">33.3</span>, <span class="fl">53.1</span>, <span class="fl">11.5</span>, <span class="fl">21.5</span>, <span class="fl">32.4</span>, <span class="fl">40.1</span>, <span class="fl">53.4</span>, <span class="fl">40.9</span>, <span class="fl">33.2</span>, <span class="fl">32.7</span>,</a>
+<a class="sourceLine" id="cb30-3" title="3">          <span class="fl">29.0</span>, <span class="fl">15.2</span>, <span class="fl">12.2</span>, <span class="fl">27.3</span>, <span class="fl">29.5</span>, <span class="fl">33.6</span>, <span class="fl">32.6</span>, <span class="fl">25.5</span>, <span class="fl">19.7</span>, <span class="fl">33.4</span>, </a>
+<a class="sourceLine" id="cb30-4" title="4">          <span class="fl">20.5</span>, <span class="fl">22.8</span>, <span class="fl">50.9</span>, <span class="fl">36.1</span>, <span class="fl">30.5</span>, <span class="fl">28.2</span>, <span class="fl">20.3</span>, <span class="fl">21.6</span>, <span class="fl">34.3</span>, <span class="fl">25.5</span>)</a></code></pre></div>
 <p>Tabla de frecuencias</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" title="1"><span class="kw">table</span>(cerdos)</a></code></pre></div>
-<pre><code>## cerdos
-## 11.5 12.2 15.2 17.6 19.7 20.3 20.5 21.5 21.6 21.8 22.8 25.5 27.3 28.2   29 29.5 30.1 
-##    1    1    1    1    1    1    1    1    1    1    1    2    1    1    1    1    1 
-## 30.2 30.5 30.6 31.6 32.4 32.6 32.7 33.2 33.3 33.4 33.6 34.3 36.1 36.7 40.1 40.9 50.9 
-##    1    1    1    1    1    1    1    1    1    2    1    2    1    1    1    1    1 
-## 52.1 53.1 53.4 
-##    1    1    1</code></pre>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" title="1"><span class="kw">table</span>(cerdos)</a></code></pre></div>
 <ul>
 <li>Realice una tabla de frecuencias relativas.</li>
 </ul>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" title="1">cerdos2&lt;-<span class="kw">table</span>(cerdos)</a>
-<a class="sourceLine" id="cb35-2" title="2"><span class="kw">prop.table</span>(cerdos2)</a></code></pre></div>
-<pre><code>## cerdos
-##  11.5  12.2  15.2  17.6  19.7  20.3  20.5  21.5  21.6  21.8  22.8  25.5  27.3  28.2 
-## 0.025 0.025 0.025 0.025 0.025 0.025 0.025 0.025 0.025 0.025 0.025 0.050 0.025 0.025 
-##    29  29.5  30.1  30.2  30.5  30.6  31.6  32.4  32.6  32.7  33.2  33.3  33.4  33.6 
-## 0.025 0.025 0.025 0.025 0.025 0.025 0.025 0.025 0.025 0.025 0.025 0.025 0.050 0.025 
-##  34.3  36.1  36.7  40.1  40.9  50.9  52.1  53.1  53.4 
-## 0.050 0.025 0.025 0.025 0.025 0.025 0.025 0.025 0.025</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" title="1">cerdos2&lt;-<span class="kw">table</span>(cerdos)</a>
+<a class="sourceLine" id="cb32-2" title="2"><span class="kw">prop.table</span>(cerdos2)</a></code></pre></div>
 <p>A continuación se presentan el histograma, polígono de frecuencias y ojiva correspondientes a la tabla de distribuciones de frecuencias</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" title="1"><span class="kw">library</span>(agricolae) <span class="co">#cargo la librería agricolae</span></a>
-<a class="sourceLine" id="cb37-2" title="2">hist_cerdos&lt;-<span class="kw">hist</span>(cerdos) <span class="co">#realizo un histograma</span></a>
-<a class="sourceLine" id="cb37-3" title="3"><span class="kw">polygon.freq</span>(hist_cerdos) <span class="co">#realizo un polígono de frecuencias</span></a></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" title="1"><span class="kw">library</span>(agricolae) <span class="co">#cargo la librería agricolae</span></a>
+<a class="sourceLine" id="cb33-2" title="2">hist_cerdos&lt;-<span class="kw">hist</span>(cerdos) <span class="co">#realizo un histograma</span></a>
+<a class="sourceLine" id="cb33-3" title="3"><span class="kw">polygon.freq</span>(hist_cerdos) <span class="co">#realizo un polígono de frecuencias</span></a></code></pre></div>
 <p><img src="guias-tp_files/figure-html/unnamed-chunk-31-1.png" width="480" /></p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb38-1" title="1"><span class="kw">ogive.freq</span>(hist_cerdos) </a></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" title="1"><span class="kw">ogive.freq</span>(hist_cerdos) </a></code></pre></div>
 <p><img src="guias-tp_files/figure-html/unnamed-chunk-32-1.png" width="480" /></p>
 <pre><code>##     x   RCF
 ## 1  10 0.000

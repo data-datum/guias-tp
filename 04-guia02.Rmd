@@ -58,14 +58,14 @@ empleados<-c("ituzaingo", "beron_de_astrada", "goya", "capital", "mercedes",
 ```
 
 Creo una tabla de frecuencias absolutas con la función `table()`
-```{r }
+```{r eval=FALSE}
 table(empleados)
 ```
 
 
-* Realizar una tabla de frecuencias relativas.
+* Realizar una tabla de frecuencias relativas con función `prop.table()`
 
-```{r }
+```{r eval=FALSE}
 tabla<-table(empleados) #guardo en un objeto de R
 prop.table(tabla) 
 ```
@@ -74,7 +74,7 @@ __La función prop.table() recibe como argumento una tabla de frecuencias absolu
 
 * Realizar un gráfico de barras con la distribución por departamento. 
 
-```{r }
+```{r eval=FALSE}
 barplot(tabla, las=2)
 ```
 
@@ -120,13 +120,13 @@ cerdos<-c(30.2, 17.6, 34.3, 30.6, 33.4, 31.6, 52.1, 21.8, 30.1, 36.7,
 ```
 
 Tabla de frecuencias
-```{r }
+```{r eval=FALSE}
 table(cerdos)
 ```
 
 * Realice una tabla de frecuencias relativas. 
 
-```{r }
+```{r eval=FALSE}
 cerdos2<-table(cerdos)
 prop.table(cerdos2)
 ```
