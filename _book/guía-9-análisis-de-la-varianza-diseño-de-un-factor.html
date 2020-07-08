@@ -24,7 +24,7 @@
 <meta name="author" content="Ingeniería Industrial" />
 
 
-<meta name="date" content="2020-07-07" />
+<meta name="date" content="2020-07-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -155,7 +155,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5.2" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#matrices"><i class="fa fa-check"></i><b>3.5.2</b> Matrices</a></li>
 <li class="chapter" data-level="3.5.3" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#dataframes-o-marco-de-datos"><i class="fa fa-check"></i><b>3.5.3</b> Dataframes o Marco de datos</a></li>
 </ul></li>
-<li class="chapter" data-level="3.6" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#bibliografía"><i class="fa fa-check"></i><b>3.6</b> Bibliografía</a></li>
+<li class="chapter" data-level="3.6" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#r-como-calculadora"><i class="fa fa-check"></i><b>3.6</b> R como calculadora</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#suma"><i class="fa fa-check"></i><b>3.6.1</b> Suma</a></li>
+<li class="chapter" data-level="3.6.2" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#multiplicación"><i class="fa fa-check"></i><b>3.6.2</b> Multiplicación</a></li>
+<li class="chapter" data-level="3.6.3" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#división-real-de-dos-números"><i class="fa fa-check"></i><b>3.6.3</b> División real de dos números</a></li>
+<li class="chapter" data-level="3.6.4" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#división-entera"><i class="fa fa-check"></i><b>3.6.4</b> División entera</a></li>
+<li class="chapter" data-level="3.6.5" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#potenciación"><i class="fa fa-check"></i><b>3.6.5</b> Potenciación</a></li>
+<li class="chapter" data-level="3.6.6" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#potenciación-de-exponente-real"><i class="fa fa-check"></i><b>3.6.6</b> Potenciación de exponente real</a></li>
+<li class="chapter" data-level="3.6.7" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#raíz-cuadrada-de-2"><i class="fa fa-check"></i><b>3.6.7</b> Raíz cuadrada de 2</a></li>
+<li class="chapter" data-level="3.6.8" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#logarimto-neperiano-de-4"><i class="fa fa-check"></i><b>3.6.8</b> Logarimto neperiano de 4</a></li>
+<li class="chapter" data-level="3.6.9" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#logaritmo-de-4-en-base-10"><i class="fa fa-check"></i><b>3.6.9</b> Logaritmo de 4 en base 10</a></li>
+<li class="chapter" data-level="3.6.10" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#el-número-e"><i class="fa fa-check"></i><b>3.6.10</b> El número e</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#bibliografía"><i class="fa fa-check"></i><b>3.7</b> Bibliografía</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="guía-1-introducción-al-uso-de-r-y-rstudio.html"><a href="guía-1-introducción-al-uso-de-r-y-rstudio.html"><i class="fa fa-check"></i><b>4</b> Guía 1 - Introducción al uso de R y Rstudio</a><ul>
 <li class="chapter" data-level="4.1" data-path="guía-1-introducción-al-uso-de-r-y-rstudio.html"><a href="guía-1-introducción-al-uso-de-r-y-rstudio.html#problema-1"><i class="fa fa-check"></i><b>4.1</b> Problema 1</a></li>
@@ -335,7 +347,7 @@ Las observaciones obtenidas acerca de la resistencia a la tensión son:</p>
 <li>Realizar un análisis de la varianza con un nivel de significancia alfa=5%.</li>
 <li>Si corresponde realizar la prueba de Tukey e interpretar los resultados.</li>
 </ol>
-<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb180-1" title="1"><span class="co">#importamos los datos con &quot;import dataset&quot; el set de datos &#39;algodon.csv&#39;</span></a></code></pre></div>
+<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb200-1" title="1"><span class="co">#importamos los datos con &quot;import dataset&quot; el set de datos &#39;algodon.csv&#39;</span></a></code></pre></div>
 <p>En el set de datos:</p>
 <ul>
 <li>Grupo1: 15 % de algodón</li>
@@ -344,8 +356,8 @@ Las observaciones obtenidas acerca de la resistencia a la tensión son:</p>
 <li>Grupo4: 30 % de algodón</li>
 <li>Grupo5: 35 % de algodón</li>
 </ul>
-<div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb181-1" title="1"><span class="co">#controlamos que haya sido importado el dataset de manera correcta</span></a>
-<a class="sourceLine" id="cb181-2" title="2"><span class="kw">head</span>(algodon)</a></code></pre></div>
+<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb201-1" title="1"><span class="co">#controlamos que haya sido importado el dataset de manera correcta</span></a>
+<a class="sourceLine" id="cb201-2" title="2"><span class="kw">head</span>(algodon)</a></code></pre></div>
 <pre><code>##   muestras  grupo
 ## 1        7 grupo1
 ## 2        7 grupo1
@@ -353,20 +365,20 @@ Las observaciones obtenidas acerca de la resistencia a la tensión son:</p>
 ## 4       11 grupo1
 ## 5        9 grupo1
 ## 6       12 grupo2</code></pre>
-<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb183-1" title="1"><span class="co">#visualizamos como se distribuyen los valores para cada grupo</span></a>
-<a class="sourceLine" id="cb183-2" title="2"><span class="kw">boxplot</span>(muestras<span class="op">~</span>grupo, <span class="dt">data=</span>algodon)</a></code></pre></div>
-<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb184-1" title="1"><span class="kw">aov</span>(muestras<span class="op">~</span>grupo, <span class="dt">data=</span>algodon)</a></code></pre></div>
-<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb185-1" title="1">anova_algodon&lt;-<span class="kw">aov</span>(muestras<span class="op">~</span>grupo, <span class="dt">data=</span>algodon)</a>
-<a class="sourceLine" id="cb185-2" title="2"><span class="kw">summary</span>(anova_algodon)</a></code></pre></div>
-<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb186-1" title="1"><span class="co">#prueba de Tukey</span></a>
-<a class="sourceLine" id="cb186-2" title="2"><span class="kw">TukeyHSD</span>(anova_algodon)</a></code></pre></div>
+<div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb203-1" title="1"><span class="co">#visualizamos como se distribuyen los valores para cada grupo</span></a>
+<a class="sourceLine" id="cb203-2" title="2"><span class="kw">boxplot</span>(muestras<span class="op">~</span>grupo, <span class="dt">data=</span>algodon)</a></code></pre></div>
+<div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb204-1" title="1"><span class="kw">aov</span>(muestras<span class="op">~</span>grupo, <span class="dt">data=</span>algodon)</a></code></pre></div>
+<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb205-1" title="1">anova_algodon&lt;-<span class="kw">aov</span>(muestras<span class="op">~</span>grupo, <span class="dt">data=</span>algodon)</a>
+<a class="sourceLine" id="cb205-2" title="2"><span class="kw">summary</span>(anova_algodon)</a></code></pre></div>
+<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb206-1" title="1"><span class="co">#prueba de Tukey</span></a>
+<a class="sourceLine" id="cb206-2" title="2"><span class="kw">TukeyHSD</span>(anova_algodon)</a></code></pre></div>
 </div>
 <div id="ejercicio-2-7" class="section level2">
 <h2><span class="header-section-number">12.2</span> Ejercicio 2</h2>
 <p>La estructura financiera de una empresa consiste en la forma en que sus activos se dividen en capital y deuda, y el apalancamiento financiero se refiere al porcentaje de activos financiados con endeudamiento.
 En el artículo The Effect of Financial Leverage on Return, Tai Ma, de Virginia Tech, afirma que es posible utilizar el apalancamiento financiero para incrementar la tasa de rendimiento sobre el capital. Dicho de otra manera, los accionistas pueden recibir rendimientos más elevados sobre el capital propio con la misma cantidad de inversión si usan apalancamiento financiero. Los siguientes datos muestran las tasas de rendimiento sobre el capital utilizando 3 niveles distintos de apalancamiento financiero, así como un nivel de control (deuda igual a cero) para 24 empresas seleccionadas al azar.</p>
 <table>
-<caption><span id="tab:unnamed-chunk-152">Table 12.1: </span>Tasas de rendimiento sobre el capital</caption>
+<caption><span id="tab:unnamed-chunk-162">Table 12.1: </span>Tasas de rendimiento sobre el capital</caption>
 <thead>
 <tr class="header">
 <th align="center">Control</th>
@@ -420,11 +432,11 @@ En el artículo The Effect of Financial Leverage on Return, Tai Ma, de Virginia 
 <li>Realizar un gráfico de boxplot para visualizar como se distribuyen los valores obtenidos en el estudio.</li>
 <li>Haga el análisis de varianza a un nivel de significancia de 0.05. Liste el modelo y los supuestos asociados. d. Informe el p-valor y aporte las conclusiones estadísticas al problema, indicando la hipótesis nula y la alternativa.</li>
 </ol>
-<div class="sourceCode" id="cb187"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb187-1" title="1"><span class="co">#En primer lugar vamos a ingresar los datos</span></a>
-<a class="sourceLine" id="cb187-2" title="2"><span class="co">#recordar como se ingresa con import dataset</span></a>
-<a class="sourceLine" id="cb187-3" title="3"><span class="co">#llamamos al objeto ingresado &quot;empresa&quot;</span></a></code></pre></div>
-<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb188-1" title="1"><span class="co">#corroboramos que el dataset fue importado correctamente</span></a>
-<a class="sourceLine" id="cb188-2" title="2"><span class="kw">head</span>(empresa)</a></code></pre></div>
+<div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb207-1" title="1"><span class="co">#En primer lugar vamos a ingresar los datos</span></a>
+<a class="sourceLine" id="cb207-2" title="2"><span class="co">#recordar como se ingresa con import dataset</span></a>
+<a class="sourceLine" id="cb207-3" title="3"><span class="co">#llamamos al objeto ingresado &quot;empresa&quot;</span></a></code></pre></div>
+<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb208-1" title="1"><span class="co">#corroboramos que el dataset fue importado correctamente</span></a>
+<a class="sourceLine" id="cb208-2" title="2"><span class="kw">head</span>(empresa)</a></code></pre></div>
 <pre><code>##   empresa apalancamiento
 ## 1     2.1        control
 ## 2     5.6        control
@@ -432,11 +444,11 @@ En el artículo The Effect of Financial Leverage on Return, Tai Ma, de Virginia 
 ## 4     7.8        control
 ## 5     5.2        control
 ## 6     2.6        control</code></pre>
-<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb190-1" title="1"><span class="co">#visualizamos como se distribuyen los valores para cada grupo</span></a>
-<a class="sourceLine" id="cb190-2" title="2"><span class="kw">boxplot</span>(empresa <span class="op">~</span><span class="st"> </span>apalancamiento, <span class="dt">data =</span> empresa)</a></code></pre></div>
-<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb191-1" title="1"><span class="kw">aov</span>(empresa <span class="op">~</span><span class="st"> </span>apalancamiento, <span class="dt">data =</span> empresa)</a></code></pre></div>
-<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb192-1" title="1">anova_emp&lt;-<span class="kw">aov</span>(empresa <span class="op">~</span><span class="st"> </span>apalancamiento, <span class="dt">data =</span> empresa)</a>
-<a class="sourceLine" id="cb192-2" title="2"><span class="kw">summary</span>(anova_emp)</a></code></pre></div>
+<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb210-1" title="1"><span class="co">#visualizamos como se distribuyen los valores para cada grupo</span></a>
+<a class="sourceLine" id="cb210-2" title="2"><span class="kw">boxplot</span>(empresa <span class="op">~</span><span class="st"> </span>apalancamiento, <span class="dt">data =</span> empresa)</a></code></pre></div>
+<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb211-1" title="1"><span class="kw">aov</span>(empresa <span class="op">~</span><span class="st"> </span>apalancamiento, <span class="dt">data =</span> empresa)</a></code></pre></div>
+<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb212-1" title="1">anova_emp&lt;-<span class="kw">aov</span>(empresa <span class="op">~</span><span class="st"> </span>apalancamiento, <span class="dt">data =</span> empresa)</a>
+<a class="sourceLine" id="cb212-2" title="2"><span class="kw">summary</span>(anova_emp)</a></code></pre></div>
 
 </div>
 </div>

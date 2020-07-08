@@ -201,10 +201,80 @@ mimarco
 ```
 
 
+## R como calculadora
+
+### Suma
+
+```{r}
+2 + 2 #apretamos enter después
+```
+
+
+### Multiplicación
+
+```{r}
+2*5
+```
+
+### División real de dos números
+
+```{r}
+ 5/2
+```
+
+
+### División entera 
+Devuelve como resultado la parte entera
+
+```{r}
+5%/%2
+```
+
+### Potenciación
+
+```{r}
+5^2
+```
+
+### Potenciación de exponente real
+
+```{r}
+5^2.3
+```
+
+### Raíz cuadrada de 2
+
+```{r}
+sqrt(2)
+```
+
+### Logarimto neperiano de 4
+
+```{r}
+log(4)
+```
+
+
+### Logaritmo de 4 en base 10
+
+```{r}
+log(4,10)
+```
+
+### El número e
+
+```{r}
+exp(1)
+```
+
+
+
+
 ## Bibliografía
 
 - R para principiantes. _Juan Bosco Mendoza Vega_
 Disponible en http://bit.ly/2Zg0I3M
 - El arte de programar en R _Julio Sergio Santana & Efraín Mateos Farfán_ Disponible en http://bit.ly/2N2Y1Y8 
+- R como calculadora http://ocw.uc3m.es/estadistica/aprendizaje-del-software-estadistico-r-un-entorno-para-simulacion-y-computacion-estadistica/r-como-calculadora 
 
   

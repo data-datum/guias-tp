@@ -24,7 +24,7 @@
 <meta name="author" content="Ingeniería Industrial" />
 
 
-<meta name="date" content="2020-07-07" />
+<meta name="date" content="2020-07-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -155,7 +155,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5.2" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#matrices"><i class="fa fa-check"></i><b>3.5.2</b> Matrices</a></li>
 <li class="chapter" data-level="3.5.3" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#dataframes-o-marco-de-datos"><i class="fa fa-check"></i><b>3.5.3</b> Dataframes o Marco de datos</a></li>
 </ul></li>
-<li class="chapter" data-level="3.6" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#bibliografía"><i class="fa fa-check"></i><b>3.6</b> Bibliografía</a></li>
+<li class="chapter" data-level="3.6" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#r-como-calculadora"><i class="fa fa-check"></i><b>3.6</b> R como calculadora</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#suma"><i class="fa fa-check"></i><b>3.6.1</b> Suma</a></li>
+<li class="chapter" data-level="3.6.2" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#multiplicación"><i class="fa fa-check"></i><b>3.6.2</b> Multiplicación</a></li>
+<li class="chapter" data-level="3.6.3" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#división-real-de-dos-números"><i class="fa fa-check"></i><b>3.6.3</b> División real de dos números</a></li>
+<li class="chapter" data-level="3.6.4" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#división-entera"><i class="fa fa-check"></i><b>3.6.4</b> División entera</a></li>
+<li class="chapter" data-level="3.6.5" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#potenciación"><i class="fa fa-check"></i><b>3.6.5</b> Potenciación</a></li>
+<li class="chapter" data-level="3.6.6" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#potenciación-de-exponente-real"><i class="fa fa-check"></i><b>3.6.6</b> Potenciación de exponente real</a></li>
+<li class="chapter" data-level="3.6.7" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#raíz-cuadrada-de-2"><i class="fa fa-check"></i><b>3.6.7</b> Raíz cuadrada de 2</a></li>
+<li class="chapter" data-level="3.6.8" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#logarimto-neperiano-de-4"><i class="fa fa-check"></i><b>3.6.8</b> Logarimto neperiano de 4</a></li>
+<li class="chapter" data-level="3.6.9" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#logaritmo-de-4-en-base-10"><i class="fa fa-check"></i><b>3.6.9</b> Logaritmo de 4 en base 10</a></li>
+<li class="chapter" data-level="3.6.10" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#el-número-e"><i class="fa fa-check"></i><b>3.6.10</b> El número e</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#bibliografía"><i class="fa fa-check"></i><b>3.7</b> Bibliografía</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="guía-1-introducción-al-uso-de-r-y-rstudio.html"><a href="guía-1-introducción-al-uso-de-r-y-rstudio.html"><i class="fa fa-check"></i><b>4</b> Guía 1 - Introducción al uso de R y Rstudio</a><ul>
 <li class="chapter" data-level="4.1" data-path="guía-1-introducción-al-uso-de-r-y-rstudio.html"><a href="guía-1-introducción-al-uso-de-r-y-rstudio.html#problema-1"><i class="fa fa-check"></i><b>4.1</b> Problema 1</a></li>
@@ -442,12 +454,67 @@ La función de R para crear un vector es <strong>c()</strong> y que significa co
 ## 5    Juan   20    TRUE    Batman</code></pre>
 </div>
 </div>
+<div id="r-como-calculadora" class="section level2">
+<h2><span class="header-section-number">3.6</span> R como calculadora</h2>
+<div id="suma" class="section level3">
+<h3><span class="header-section-number">3.6.1</span> Suma</h3>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" title="1"><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span> <span class="co">#apretamos enter después</span></a></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+</div>
+<div id="multiplicación" class="section level3">
+<h3><span class="header-section-number">3.6.2</span> Multiplicación</h3>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" title="1"><span class="dv">2</span><span class="op">*</span><span class="dv">5</span></a></code></pre></div>
+<pre><code>## [1] 10</code></pre>
+</div>
+<div id="división-real-de-dos-números" class="section level3">
+<h3><span class="header-section-number">3.6.3</span> División real de dos números</h3>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" title="1"> <span class="dv">5</span><span class="op">/</span><span class="dv">2</span></a></code></pre></div>
+<pre><code>## [1] 2.5</code></pre>
+</div>
+<div id="división-entera" class="section level3">
+<h3><span class="header-section-number">3.6.4</span> División entera</h3>
+<p>Devuelve como resultado la parte entera</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" title="1"><span class="dv">5</span><span class="op">%/%</span><span class="dv">2</span></a></code></pre></div>
+<pre><code>## [1] 2</code></pre>
+</div>
+<div id="potenciación" class="section level3">
+<h3><span class="header-section-number">3.6.5</span> Potenciación</h3>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" title="1"><span class="dv">5</span><span class="op">^</span><span class="dv">2</span></a></code></pre></div>
+<pre><code>## [1] 25</code></pre>
+</div>
+<div id="potenciación-de-exponente-real" class="section level3">
+<h3><span class="header-section-number">3.6.6</span> Potenciación de exponente real</h3>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" title="1"><span class="dv">5</span><span class="op">^</span><span class="fl">2.3</span></a></code></pre></div>
+<pre><code>## [1] 40.51641</code></pre>
+</div>
+<div id="raíz-cuadrada-de-2" class="section level3">
+<h3><span class="header-section-number">3.6.7</span> Raíz cuadrada de 2</h3>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" title="1"><span class="kw">sqrt</span>(<span class="dv">2</span>)</a></code></pre></div>
+<pre><code>## [1] 1.414214</code></pre>
+</div>
+<div id="logarimto-neperiano-de-4" class="section level3">
+<h3><span class="header-section-number">3.6.8</span> Logarimto neperiano de 4</h3>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb38-1" title="1"><span class="kw">log</span>(<span class="dv">4</span>)</a></code></pre></div>
+<pre><code>## [1] 1.386294</code></pre>
+</div>
+<div id="logaritmo-de-4-en-base-10" class="section level3">
+<h3><span class="header-section-number">3.6.9</span> Logaritmo de 4 en base 10</h3>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb40-1" title="1"><span class="kw">log</span>(<span class="dv">4</span>,<span class="dv">10</span>)</a></code></pre></div>
+<pre><code>## [1] 0.60206</code></pre>
+</div>
+<div id="el-número-e" class="section level3">
+<h3><span class="header-section-number">3.6.10</span> El número e</h3>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb42-1" title="1"><span class="kw">exp</span>(<span class="dv">1</span>)</a></code></pre></div>
+<pre><code>## [1] 2.718282</code></pre>
+</div>
+</div>
 <div id="bibliografía" class="section level2">
-<h2><span class="header-section-number">3.6</span> Bibliografía</h2>
+<h2><span class="header-section-number">3.7</span> Bibliografía</h2>
 <ul>
 <li>R para principiantes. <em>Juan Bosco Mendoza Vega</em>
 Disponible en <a href="http://bit.ly/2Zg0I3M" class="uri">http://bit.ly/2Zg0I3M</a></li>
 <li>El arte de programar en R <em>Julio Sergio Santana &amp; Efraín Mateos Farfán</em> Disponible en <a href="http://bit.ly/2N2Y1Y8" class="uri">http://bit.ly/2N2Y1Y8</a></li>
+<li>R como calculadora <a href="http://ocw.uc3m.es/estadistica/aprendizaje-del-software-estadistico-r-un-entorno-para-simulacion-y-computacion-estadistica/r-como-calculadora" class="uri">http://ocw.uc3m.es/estadistica/aprendizaje-del-software-estadistico-r-un-entorno-para-simulacion-y-computacion-estadistica/r-como-calculadora</a></li>
 </ul>
 
 </div>

@@ -24,7 +24,7 @@
 <meta name="author" content="Ingeniería Industrial" />
 
 
-<meta name="date" content="2020-07-07" />
+<meta name="date" content="2020-07-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -155,7 +155,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5.2" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#matrices"><i class="fa fa-check"></i><b>3.5.2</b> Matrices</a></li>
 <li class="chapter" data-level="3.5.3" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#dataframes-o-marco-de-datos"><i class="fa fa-check"></i><b>3.5.3</b> Dataframes o Marco de datos</a></li>
 </ul></li>
-<li class="chapter" data-level="3.6" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#bibliografía"><i class="fa fa-check"></i><b>3.6</b> Bibliografía</a></li>
+<li class="chapter" data-level="3.6" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#r-como-calculadora"><i class="fa fa-check"></i><b>3.6</b> R como calculadora</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#suma"><i class="fa fa-check"></i><b>3.6.1</b> Suma</a></li>
+<li class="chapter" data-level="3.6.2" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#multiplicación"><i class="fa fa-check"></i><b>3.6.2</b> Multiplicación</a></li>
+<li class="chapter" data-level="3.6.3" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#división-real-de-dos-números"><i class="fa fa-check"></i><b>3.6.3</b> División real de dos números</a></li>
+<li class="chapter" data-level="3.6.4" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#división-entera"><i class="fa fa-check"></i><b>3.6.4</b> División entera</a></li>
+<li class="chapter" data-level="3.6.5" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#potenciación"><i class="fa fa-check"></i><b>3.6.5</b> Potenciación</a></li>
+<li class="chapter" data-level="3.6.6" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#potenciación-de-exponente-real"><i class="fa fa-check"></i><b>3.6.6</b> Potenciación de exponente real</a></li>
+<li class="chapter" data-level="3.6.7" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#raíz-cuadrada-de-2"><i class="fa fa-check"></i><b>3.6.7</b> Raíz cuadrada de 2</a></li>
+<li class="chapter" data-level="3.6.8" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#logarimto-neperiano-de-4"><i class="fa fa-check"></i><b>3.6.8</b> Logarimto neperiano de 4</a></li>
+<li class="chapter" data-level="3.6.9" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#logaritmo-de-4-en-base-10"><i class="fa fa-check"></i><b>3.6.9</b> Logaritmo de 4 en base 10</a></li>
+<li class="chapter" data-level="3.6.10" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#el-número-e"><i class="fa fa-check"></i><b>3.6.10</b> El número e</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="r-y-rstudio.html"><a href="r-y-rstudio.html#bibliografía"><i class="fa fa-check"></i><b>3.7</b> Bibliografía</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="guía-1-introducción-al-uso-de-r-y-rstudio.html"><a href="guía-1-introducción-al-uso-de-r-y-rstudio.html"><i class="fa fa-check"></i><b>4</b> Guía 1 - Introducción al uso de R y Rstudio</a><ul>
 <li class="chapter" data-level="4.1" data-path="guía-1-introducción-al-uso-de-r-y-rstudio.html"><a href="guía-1-introducción-al-uso-de-r-y-rstudio.html#problema-1"><i class="fa fa-check"></i><b>4.1</b> Problema 1</a></li>
@@ -275,30 +287,30 @@ Sabiendo que cada gráfico corresponde a diferentes variables que han arrojado l
 </ul>
 <p>Analizar los dispersogramas y asociar cada gráfico con el coeficiente que considere mas adecuado.
 Procedemos en R:</p>
-<div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb173-1" title="1"><span class="kw">plot</span>(mtcars<span class="op">$</span>hp, mtcars<span class="op">$</span>disp, <span class="dt">data=</span>mtcars, <span class="dt">xlab=</span><span class="st">&quot;hp&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;disp&quot;</span>, <span class="dt">main=</span><span class="st">&quot;Gráfico 1&quot;</span>)</a></code></pre></div>
-<p><img src="guias-tp_files/figure-html/unnamed-chunk-138-1.png" width="672" /></p>
-<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb174-1" title="1"><span class="kw">plot</span>(iris<span class="op">$</span>Sepal.Width, iris<span class="op">$</span>Sepal.Length, <span class="dt">data=</span>iris, </a>
-<a class="sourceLine" id="cb174-2" title="2">     <span class="dt">xlab=</span><span class="st">&quot;Sepal Width&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;Sepal Length&quot;</span>, <span class="dt">main=</span><span class="st">&quot;Gráfico 2&quot;</span>)</a></code></pre></div>
-<p><img src="guias-tp_files/figure-html/unnamed-chunk-139-1.png" width="672" /></p>
-<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb175-1" title="1"><span class="kw">plot</span>(iris<span class="op">$</span>Petal.Width, iris<span class="op">$</span>Petal.Length, <span class="dt">data=</span>iris, </a>
-<a class="sourceLine" id="cb175-2" title="2">     <span class="dt">xlab=</span><span class="st">&quot;Petal Width&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;Petal Length&quot;</span>, <span class="dt">main=</span><span class="st">&quot;Gráfico 3&quot;</span>)</a></code></pre></div>
-<p><img src="guias-tp_files/figure-html/unnamed-chunk-140-1.png" width="672" /></p>
+<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb193-1" title="1"><span class="kw">plot</span>(mtcars<span class="op">$</span>hp, mtcars<span class="op">$</span>disp, <span class="dt">data=</span>mtcars, <span class="dt">xlab=</span><span class="st">&quot;hp&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;disp&quot;</span>, <span class="dt">main=</span><span class="st">&quot;Gráfico 1&quot;</span>)</a></code></pre></div>
+<p><img src="guias-tp_files/figure-html/unnamed-chunk-148-1.png" width="672" /></p>
+<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb194-1" title="1"><span class="kw">plot</span>(iris<span class="op">$</span>Sepal.Width, iris<span class="op">$</span>Sepal.Length, <span class="dt">data=</span>iris, </a>
+<a class="sourceLine" id="cb194-2" title="2">     <span class="dt">xlab=</span><span class="st">&quot;Sepal Width&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;Sepal Length&quot;</span>, <span class="dt">main=</span><span class="st">&quot;Gráfico 2&quot;</span>)</a></code></pre></div>
+<p><img src="guias-tp_files/figure-html/unnamed-chunk-149-1.png" width="672" /></p>
+<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb195-1" title="1"><span class="kw">plot</span>(iris<span class="op">$</span>Petal.Width, iris<span class="op">$</span>Petal.Length, <span class="dt">data=</span>iris, </a>
+<a class="sourceLine" id="cb195-2" title="2">     <span class="dt">xlab=</span><span class="st">&quot;Petal Width&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;Petal Length&quot;</span>, <span class="dt">main=</span><span class="st">&quot;Gráfico 3&quot;</span>)</a></code></pre></div>
+<p><img src="guias-tp_files/figure-html/unnamed-chunk-150-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-2-6" class="section level2">
 <h2><span class="header-section-number">11.2</span> Ejercicio 2</h2>
 <p>El set de datos “cars” o autos está por defecto en R. Tiene los registros de velocidad y distancia, y un total de 50 observaciones.</p>
-<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb176-1" title="1">?cars <span class="co">#ayuda en R</span></a></code></pre></div>
+<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb196-1" title="1">?cars <span class="co">#ayuda en R</span></a></code></pre></div>
 <p>Los datos corresponden a la velocidad de los automóviles y las distancias tomadas para detenerse.</p>
 <ol style="list-style-type: decimal">
 <li>Vamos a graficar un dispersograma</li>
 </ol>
-<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb177-1" title="1"><span class="kw">plot</span>(cars, <span class="dt">xlab =</span> <span class="st">&quot;Speed (mph)&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;Stopping distance (ft)&quot;</span>,</a>
-<a class="sourceLine" id="cb177-2" title="2">     <span class="dt">las =</span> <span class="dv">1</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb197-1" title="1"><span class="kw">plot</span>(cars, <span class="dt">xlab =</span> <span class="st">&quot;Speed (mph)&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;Stopping distance (ft)&quot;</span>,</a>
+<a class="sourceLine" id="cb197-2" title="2">     <span class="dt">las =</span> <span class="dv">1</span>)</a></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>Calcular el coeficiente de correlación</li>
 </ol>
-<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb178-1" title="1"><span class="co">#En R, lo hacemos de la siguiente manera</span></a>
-<a class="sourceLine" id="cb178-2" title="2"><span class="kw">cor</span>(cars<span class="op">$</span>speed, cars<span class="op">$</span>dist)</a></code></pre></div>
+<div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb198-1" title="1"><span class="co">#En R, lo hacemos de la siguiente manera</span></a>
+<a class="sourceLine" id="cb198-2" title="2"><span class="kw">cor</span>(cars<span class="op">$</span>speed, cars<span class="op">$</span>dist)</a></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
 <li>Probar si el coeficiente es significativamente distinto de cero al 5% (test de hipótesis) y concluir.</li>
 </ol>
@@ -310,9 +322,9 @@ Procedemos en R:</p>
 <li><p>Escribir el modelo lineal que relaciona ambas variables.</p></li>
 <li><p>Hallar los estimadores a y b y escribir la ecuación de la recta.</p></li>
 </ol>
-<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb179-1" title="1"><span class="co">#Podemos hallar los estimadores a y b mediante la siguiente función</span></a>
-<a class="sourceLine" id="cb179-2" title="2">cars_model&lt;-<span class="kw">lm</span>(dist<span class="op">~</span>speed, <span class="dt">data=</span>cars)</a>
-<a class="sourceLine" id="cb179-3" title="3">cars_model</a></code></pre></div>
+<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb199-1" title="1"><span class="co">#Podemos hallar los estimadores a y b mediante la siguiente función</span></a>
+<a class="sourceLine" id="cb199-2" title="2">cars_model&lt;-<span class="kw">lm</span>(dist<span class="op">~</span>speed, <span class="dt">data=</span>cars)</a>
+<a class="sourceLine" id="cb199-3" title="3">cars_model</a></code></pre></div>
 <ol start="3" style="list-style-type: lower-alpha">
 <li>Si la velocidad es de 6 mph, ¿qué distancia se necesitará para detenerse?</li>
 </ol>
