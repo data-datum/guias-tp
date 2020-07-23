@@ -272,9 +272,8 @@ exp(1)
 
 ## Bibliografía
 
-- R para principiantes. _Juan Bosco Mendoza Vega_
+- R para principiantes _Juan Bosco Mendoza Vega_
 Disponible en http://bit.ly/2Zg0I3M
 - El arte de programar en R _Julio Sergio Santana & Efraín Mateos Farfán_ Disponible en http://bit.ly/2N2Y1Y8 
 - R como calculadora http://ocw.uc3m.es/estadistica/aprendizaje-del-software-estadistico-r-un-entorno-para-simulacion-y-computacion-estadistica/r-como-calculadora 
-
-  
+- Foundations of Statistics with R (2020) _Darrin Speegle and Bryan Clair_ Rhttps://mathstat.slu.edu/~speegle/_book/preface.html 
