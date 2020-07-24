@@ -1,5 +1,15 @@
 # Guía 8 - Correlación Simple - Regresión Lineal Simple
 
+## Objetivos
+
+
+Que el alumno 
+
+* interprete los análisis de correlación y regresión
+
+* entienda la diferencia entre ambos y que pueda realizar los análisis correspondientes. 
+
+
 ## Ejercicio 1
 
 Los siguientes gráficos representan la relación entre dos variables aleatorias x e y. 

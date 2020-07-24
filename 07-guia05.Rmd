@@ -1,5 +1,10 @@
 # Guía 5 - Probabilidades. Teoría de la Estimación
 
+## Objetivos
+
+* Que el alumno calcule e interprete intervalos de confianza
+
+
 ## Ejercicio 1
 
 Dos empresas se presentan a una licitación para la entrega de materiales para una construcción. Para decidir la adjudicación, se analiza el plazo de entrega de los materiales que cada empresa propone. Se sabe que ese plazo es una variable aleatoria que tiene distribución normal, con los siguientes parámetros:

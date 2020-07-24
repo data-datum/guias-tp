@@ -1,5 +1,16 @@
 # Guía 7 - Pruebas de Chi-Cuadrado
 
+## Objetivos
+
+Que el alumno
+
+* aplique e interprete las pruebas para variables cualitaticas (Usos de Chi cuadrado).
+
+* realice e interprete tablas de contingencia
+
+
+
+
 ## Ejercicio 1
 
 Una máquina mezcla cacahuetes, avellanas, anacardos y nueces a razón de 5/10, 2/10, 2/10 y 1/10 respectivamente. El area de mantenimiento quiere asegurarse que la máquina funciona bien, para lo cual se seleccionó una lata de 500 de estos frutos secos la cual contiene 269 cacahuetes, 112 avellanas, 74 anacardos y 45 nueces de Brasil. Al nivel de significación del 10 %, pruebe la hipótesis de que la máquina mezcla los frutos secos en la razón 5:2:2:1, es decir que funciona bien.

@@ -1,5 +1,19 @@
 # Guía 2 - Variables aleatorias
 
+## Objetivos
+
+Que el alumno
+
+* Conozca y diferencie variables
+
+* Realice e Interprete las tablas de frecuencias para variables cualitativas y cuantitativas.
+
+* Realice e Interprete gráficos como el histograma y ojiva.
+
+
+
+
+
 ## Ejercicio 1
 
 Clasificar las siguientes variables __de acuerdo a su tipo__ (cualitativas, cuantitativas discretas o cuantitativas continuas) e identificar las __escalas de medición__ (nominal, ordinal, de intervalo, razón o proporción) en cada caso:

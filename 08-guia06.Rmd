@@ -1,5 +1,12 @@
 # Guía 6 - Test de hipótesis
 
+## Objetivos
+
+* Que el alumno aplique la teoría de las pruebas de hipótesis de uno y 2 promedios para situaciones con muestras pequeñas y grandes 
+
+
+
+
 ## Problema 1
 
 Ante una denuncia de los consumidores a la Dirección de Lealtad Comercial, una empresa quiere saber si puede garantizar que las cajas de un de un detergente en polvo que vende, contiene 500 gramos del producto. Por experiencia, la firma sabe que la cantidad de detergente que contienen las cajas tiene distribución normal, por lo que se toma una muestra aleatoria de 35 cajas y se calcula la media de detergente contenido en ellas, lo que da un valor de 480 gramos, con un desvío estándar de 75 gramos. Con esos datos, pruebe si el contenido no supera los 500 gramos con un nivel de significación del 5 %.

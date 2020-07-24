@@ -1,5 +1,20 @@
 # Guía 4 - Probabilidades. Distribuciones de probabilidad. 
 
+## Objetivos
+
+Que el alumno 
+
+* Calcule probabilidades.
+
+* Reconozca las gráficas de las funciones de distribución y comprendan los cambios que producen los parámetros
+
+* Obtengan probabilidades acumuladas menores o mayores a un valor y entre 2 valores.
+
+* Adquiera competencias en la aplicación de probabilidades a ejemplos reales.
+
+
+
+
 ## Ejercicio 1
 
 Calcular las probabilidades de obtener:

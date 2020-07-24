@@ -1,5 +1,16 @@
 # Guía 3 - Parámetros y Estimadores
 
+## Objetivos 
+
+Que el alumno 
+
+* Reconozca la diferencia entre Estimador y Parámetro
+
+* Calcule medidas de posición y Dispersión. 
+
+* Realice gráficos donde pueda representar dichas medidas.
+
+
 ## Ejercicio 1
 
 El gráfico siguiente representa la variable millas por galón del 

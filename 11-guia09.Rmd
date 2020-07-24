@@ -1,5 +1,15 @@
 # Guía 9 - Análisis de la Varianza - Diseño de un factor
 
+## Objetivos
+
+Que el alumno 
+
+* conozca los fundamentos del Análisis de la Variancia.
+
+* analice e interprete resultados de trabajos experimentales llevados en Diseños de uno o más factores
+
+
+
 ## Ejercicio 1
 
 Un ingeniero está interesado en maximizar la resistencia a la tensión, de una nueva fibra sintética, que se empleará en la manufactura de tela para camisas de hombre. El ingeniero abe por experiencia que la resistencia está influida por el porcentaje de algodón presente en la fibra por lo que decide probar muestras a cinco niveles de porcentaje de algodón: 15, 20, 25, 30 y 35%. Con cinco repeticiones por cada nivel de contenido de algodón. 
