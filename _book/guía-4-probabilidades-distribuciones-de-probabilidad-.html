@@ -24,7 +24,7 @@
 <meta name="author" content="Ingeniería Industrial" />
 
 
-<meta name="date" content="2020-07-23" />
+<meta name="date" content="2020-07-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -328,17 +328,17 @@ Si se toman 5 artículos de ese lote al azar, y se prueban los mismos. ¿Cuál e
 <div id="en-r" class="section level3">
 <h3><span class="header-section-number">7.4.1</span> En R</h3>
 <p>Probabilidad de que 3 sean defectuosos == P(x=2)</p>
-<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb68-1" title="1"><span class="co">#Para calcular una probabilidad puntual con distribución binomial</span></a>
-<a class="sourceLine" id="cb68-2" title="2"><span class="kw">dbinom</span>(<span class="dt">x=</span><span class="dv">3</span>, <span class="dt">size=</span><span class="dv">5</span>, <span class="dt">prob=</span><span class="fl">0.15</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb66-1" title="1"><span class="co">#Para calcular una probabilidad puntual con distribución binomial</span></a>
+<a class="sourceLine" id="cb66-2" title="2"><span class="kw">dbinom</span>(<span class="dt">x=</span><span class="dv">3</span>, <span class="dt">size=</span><span class="dv">5</span>, <span class="dt">prob=</span><span class="fl">0.15</span>)</a></code></pre></div>
 <p>Probabilidad de que 3 o menos de 3 sean defectuosos == P(X&lt;=3)</p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb69-1" title="1"><span class="kw">pbinom</span>(<span class="dt">q=</span><span class="dv">2</span>, <span class="dt">size=</span><span class="dv">5</span>, <span class="dt">prob=</span><span class="fl">0.15</span>, <span class="dt">lower.tail=</span><span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb67-1" title="1"><span class="kw">pbinom</span>(<span class="dt">q=</span><span class="dv">2</span>, <span class="dt">size=</span><span class="dv">5</span>, <span class="dt">prob=</span><span class="fl">0.15</span>, <span class="dt">lower.tail=</span><span class="ot">TRUE</span>)</a></code></pre></div>
 <p>Probabilidad de que más de 2 sean defectuosos == P(X&gt;2)</p>
-<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb70-1" title="1"><span class="kw">pbinom</span>(<span class="dt">q=</span><span class="dv">2</span>, <span class="dt">size=</span><span class="dv">5</span>, <span class="dt">prob=</span><span class="fl">0.15</span>, <span class="dt">lower.tail=</span><span class="ot">FALSE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb68-1" title="1"><span class="kw">pbinom</span>(<span class="dt">q=</span><span class="dv">2</span>, <span class="dt">size=</span><span class="dv">5</span>, <span class="dt">prob=</span><span class="fl">0.15</span>, <span class="dt">lower.tail=</span><span class="ot">FALSE</span>)</a></code></pre></div>
 <p>Mediante las siguientes líneas de código va a poder graficar una distribución binomial. Fundamente si el sesgo es positivo o negativo.</p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb71-1" title="1">x &lt;-<span class="st"> </span><span class="dv">-1</span><span class="op">:</span><span class="dv">4</span></a>
-<a class="sourceLine" id="cb71-2" title="2">prob &lt;-<span class="st"> </span><span class="kw">dbinom</span>(x,<span class="dv">5</span>,<span class="fl">0.15</span>)</a>
-<a class="sourceLine" id="cb71-3" title="3"><span class="kw">barplot</span>(prob,<span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>,<span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="fl">0.6</span>),<span class="dt">names.arg=</span>x,</a>
-<a class="sourceLine" id="cb71-4" title="4">        <span class="dt">main=</span><span class="st">&quot;Binomial Distribution</span><span class="ch">\n</span><span class="st">(n=5,p=0.15)&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb69-1" title="1">x &lt;-<span class="st"> </span><span class="dv">-1</span><span class="op">:</span><span class="dv">4</span></a>
+<a class="sourceLine" id="cb69-2" title="2">prob &lt;-<span class="st"> </span><span class="kw">dbinom</span>(x,<span class="dv">5</span>,<span class="fl">0.15</span>)</a>
+<a class="sourceLine" id="cb69-3" title="3"><span class="kw">barplot</span>(prob,<span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>,<span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="fl">0.6</span>),<span class="dt">names.arg=</span>x,</a>
+<a class="sourceLine" id="cb69-4" title="4">        <span class="dt">main=</span><span class="st">&quot;Binomial Distribution</span><span class="ch">\n</span><span class="st">(n=5,p=0.15)&quot;</span>)</a></code></pre></div>
 </div>
 </div>
 <div id="ejercicio-4" class="section level2">
@@ -349,7 +349,7 @@ Si se toman 5 artículos de ese lote al azar, y se prueban los mismos. ¿Cuál e
 <div id="en-r-1" class="section level3">
 <h3><span class="header-section-number">7.5.1</span> En R</h3>
 <p>¿Cuál es la probabilidad de que en 3 semanas se produzcan 2 heladas?</p>
-<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb72-1" title="1"><span class="kw">dpois</span>(<span class="dt">x=</span><span class="dv">2</span>, <span class="dt">lambda=</span><span class="dv">6</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb70-1" title="1"><span class="kw">dpois</span>(<span class="dt">x=</span><span class="dv">2</span>, <span class="dt">lambda=</span><span class="dv">6</span>)</a></code></pre></div>
 </div>
 </div>
 <div id="ejercicio-5" class="section level2">
@@ -363,50 +363,50 @@ Interpretar las diferencias observadas al cambiar los parámetros y escribir al 
 <div id="en-r-2" class="section level3">
 <h3><span class="header-section-number">7.6.1</span> En R</h3>
 <p>Para graficar funciones de densidad utilizamos la función <strong>curve()</strong></p>
-<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb73-1" title="1"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) <span class="co">#permite disponer gráficos de a grupos </span></a>
-<a class="sourceLine" id="cb73-2" title="2"><span class="kw">curve</span>(<span class="kw">dnorm</span>(x, <span class="dt">mean =</span> <span class="dv">0</span>, <span class="dt">sd =</span> <span class="dv">1</span>), <span class="co">#distribución de probabilidad normal</span></a>
-<a class="sourceLine" id="cb73-3" title="3">      <span class="dt">from =</span> <span class="dv">-4</span>, <span class="co">#límite inferior del eje x</span></a>
-<a class="sourceLine" id="cb73-4" title="4">      <span class="dt">to =</span> <span class="dv">4</span>, <span class="co">#límite superior del eje x</span></a>
-<a class="sourceLine" id="cb73-5" title="5">      <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>, <span class="co">#tipo de linea trazada</span></a>
-<a class="sourceLine" id="cb73-6" title="6">      <span class="dt">xlab =</span> <span class="st">&quot;&quot;</span>, <span class="co">#sin rótulo el eje X</span></a>
-<a class="sourceLine" id="cb73-7" title="7">      <span class="dt">ylab =</span> <span class="st">&quot;Probability Density&quot;</span>, <span class="co">#rótulo eje Y</span></a>
-<a class="sourceLine" id="cb73-8" title="8">      <span class="dt">main =</span> <span class="st">&quot;Normal Distribution&quot;</span>) <span class="co">#título del gráfico</span></a>
-<a class="sourceLine" id="cb73-9" title="9"><span class="kw">curve</span>(<span class="kw">dnorm</span>(x, <span class="dt">mean =</span> <span class="dv">0</span>, <span class="dt">sd =</span> <span class="dv">2</span>), <span class="co">#distribución de probabilidad normal</span></a>
-<a class="sourceLine" id="cb73-10" title="10">      <span class="dt">from =</span> <span class="dv">-6</span>, <span class="co">#límite inferior del eje x</span></a>
-<a class="sourceLine" id="cb73-11" title="11">      <span class="dt">to =</span> <span class="dv">6</span>, <span class="co">#límite superior del eje x</span></a>
-<a class="sourceLine" id="cb73-12" title="12">      <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>, <span class="co">#tipo de linea trazada</span></a>
-<a class="sourceLine" id="cb73-13" title="13">      <span class="dt">xlab =</span> <span class="st">&quot;&quot;</span>, <span class="co">#sin rótulo el eje X</span></a>
-<a class="sourceLine" id="cb73-14" title="14">      <span class="dt">ylab =</span> <span class="st">&quot;Probability Density&quot;</span>, <span class="co">#rótulo eje Y</span></a>
-<a class="sourceLine" id="cb73-15" title="15">      <span class="dt">main =</span> <span class="st">&quot;Normal Distribution&quot;</span>) <span class="co">#título del gráfico</span></a>
-<a class="sourceLine" id="cb73-16" title="16"><span class="kw">curve</span>(<span class="kw">dnorm</span>(x, <span class="dt">mean =</span> <span class="dv">3</span>, <span class="dt">sd =</span> <span class="dv">1</span>), <span class="co">#distribución de probabilidad normal</span></a>
-<a class="sourceLine" id="cb73-17" title="17">      <span class="dt">from =</span> <span class="dv">-1</span>, <span class="co">#límite inferior del eje x</span></a>
-<a class="sourceLine" id="cb73-18" title="18">      <span class="dt">to =</span> <span class="dv">7</span>, <span class="co">#límite superior del eje x</span></a>
-<a class="sourceLine" id="cb73-19" title="19">      <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>, <span class="co">#tipo de linea trazada</span></a>
-<a class="sourceLine" id="cb73-20" title="20">      <span class="dt">xlab =</span> <span class="st">&quot;&quot;</span>, <span class="co">#sin rótulo el eje X</span></a>
-<a class="sourceLine" id="cb73-21" title="21">      <span class="dt">ylab =</span> <span class="st">&quot;Probability Density&quot;</span>, <span class="co">#rótulo eje Y</span></a>
-<a class="sourceLine" id="cb73-22" title="22">      <span class="dt">main =</span> <span class="st">&quot;Normal Distribution&quot;</span>) <span class="co">#título del gráfico</span></a></code></pre></div>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb71-1" title="1"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) <span class="co">#permite disponer gráficos de a grupos </span></a>
+<a class="sourceLine" id="cb71-2" title="2"><span class="kw">curve</span>(<span class="kw">dnorm</span>(x, <span class="dt">mean =</span> <span class="dv">0</span>, <span class="dt">sd =</span> <span class="dv">1</span>), <span class="co">#distribución de probabilidad normal</span></a>
+<a class="sourceLine" id="cb71-3" title="3">      <span class="dt">from =</span> <span class="dv">-4</span>, <span class="co">#límite inferior del eje x</span></a>
+<a class="sourceLine" id="cb71-4" title="4">      <span class="dt">to =</span> <span class="dv">4</span>, <span class="co">#límite superior del eje x</span></a>
+<a class="sourceLine" id="cb71-5" title="5">      <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>, <span class="co">#tipo de linea trazada</span></a>
+<a class="sourceLine" id="cb71-6" title="6">      <span class="dt">xlab =</span> <span class="st">&quot;&quot;</span>, <span class="co">#sin rótulo el eje X</span></a>
+<a class="sourceLine" id="cb71-7" title="7">      <span class="dt">ylab =</span> <span class="st">&quot;Probability Density&quot;</span>, <span class="co">#rótulo eje Y</span></a>
+<a class="sourceLine" id="cb71-8" title="8">      <span class="dt">main =</span> <span class="st">&quot;Normal Distribution&quot;</span>) <span class="co">#título del gráfico</span></a>
+<a class="sourceLine" id="cb71-9" title="9"><span class="kw">curve</span>(<span class="kw">dnorm</span>(x, <span class="dt">mean =</span> <span class="dv">0</span>, <span class="dt">sd =</span> <span class="dv">2</span>), <span class="co">#distribución de probabilidad normal</span></a>
+<a class="sourceLine" id="cb71-10" title="10">      <span class="dt">from =</span> <span class="dv">-6</span>, <span class="co">#límite inferior del eje x</span></a>
+<a class="sourceLine" id="cb71-11" title="11">      <span class="dt">to =</span> <span class="dv">6</span>, <span class="co">#límite superior del eje x</span></a>
+<a class="sourceLine" id="cb71-12" title="12">      <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>, <span class="co">#tipo de linea trazada</span></a>
+<a class="sourceLine" id="cb71-13" title="13">      <span class="dt">xlab =</span> <span class="st">&quot;&quot;</span>, <span class="co">#sin rótulo el eje X</span></a>
+<a class="sourceLine" id="cb71-14" title="14">      <span class="dt">ylab =</span> <span class="st">&quot;Probability Density&quot;</span>, <span class="co">#rótulo eje Y</span></a>
+<a class="sourceLine" id="cb71-15" title="15">      <span class="dt">main =</span> <span class="st">&quot;Normal Distribution&quot;</span>) <span class="co">#título del gráfico</span></a>
+<a class="sourceLine" id="cb71-16" title="16"><span class="kw">curve</span>(<span class="kw">dnorm</span>(x, <span class="dt">mean =</span> <span class="dv">3</span>, <span class="dt">sd =</span> <span class="dv">1</span>), <span class="co">#distribución de probabilidad normal</span></a>
+<a class="sourceLine" id="cb71-17" title="17">      <span class="dt">from =</span> <span class="dv">-1</span>, <span class="co">#límite inferior del eje x</span></a>
+<a class="sourceLine" id="cb71-18" title="18">      <span class="dt">to =</span> <span class="dv">7</span>, <span class="co">#límite superior del eje x</span></a>
+<a class="sourceLine" id="cb71-19" title="19">      <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>, <span class="co">#tipo de linea trazada</span></a>
+<a class="sourceLine" id="cb71-20" title="20">      <span class="dt">xlab =</span> <span class="st">&quot;&quot;</span>, <span class="co">#sin rótulo el eje X</span></a>
+<a class="sourceLine" id="cb71-21" title="21">      <span class="dt">ylab =</span> <span class="st">&quot;Probability Density&quot;</span>, <span class="co">#rótulo eje Y</span></a>
+<a class="sourceLine" id="cb71-22" title="22">      <span class="dt">main =</span> <span class="st">&quot;Normal Distribution&quot;</span>) <span class="co">#título del gráfico</span></a></code></pre></div>
 <p>De igual manera para una distribucion t de student</p>
-<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb74-1" title="1"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) </a>
-<a class="sourceLine" id="cb74-2" title="2"><span class="kw">curve</span>(<span class="kw">dt</span>(x, <span class="dt">df =</span> <span class="dv">5</span>),</a>
-<a class="sourceLine" id="cb74-3" title="3">      <span class="dt">from =</span> <span class="dv">-4</span>,</a>
-<a class="sourceLine" id="cb74-4" title="4">      <span class="dt">to =</span> <span class="dv">4</span>,</a>
-<a class="sourceLine" id="cb74-5" title="5">      <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>,</a>
-<a class="sourceLine" id="cb74-6" title="6">      <span class="dt">lwd =</span> <span class="dv">2</span>,</a>
-<a class="sourceLine" id="cb74-7" title="7">      <span class="dt">xlab =</span> <span class="st">&quot;Random Variable X&quot;</span>,</a>
-<a class="sourceLine" id="cb74-8" title="8">      <span class="dt">ylab =</span> <span class="st">&quot;Probability Density&quot;</span>,</a>
-<a class="sourceLine" id="cb74-9" title="9">      <span class="dt">main =</span> <span class="st">&quot;Student&#39;s t Distribution&quot;</span>,</a>
-<a class="sourceLine" id="cb74-10" title="10">      <span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="fl">0.4</span>))</a>
-<a class="sourceLine" id="cb74-11" title="11"><span class="kw">abline</span>(<span class="dt">h =</span> <span class="dv">0</span>)</a>
-<a class="sourceLine" id="cb74-12" title="12"><span class="kw">curve</span>(<span class="kw">dt</span>(x, <span class="dt">df =</span> <span class="dv">100</span>),</a>
-<a class="sourceLine" id="cb74-13" title="13">      <span class="dt">from =</span> <span class="dv">-4</span>,</a>
-<a class="sourceLine" id="cb74-14" title="14">      <span class="dt">to =</span> <span class="dv">4</span>,</a>
-<a class="sourceLine" id="cb74-15" title="15">      <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>,</a>
-<a class="sourceLine" id="cb74-16" title="16">      <span class="dt">lwd =</span> <span class="dv">2</span>,</a>
-<a class="sourceLine" id="cb74-17" title="17">      <span class="dt">xlab =</span> <span class="st">&quot;Random Variable X&quot;</span>,</a>
-<a class="sourceLine" id="cb74-18" title="18">      <span class="dt">ylab =</span> <span class="st">&quot;Probability Density&quot;</span>,</a>
-<a class="sourceLine" id="cb74-19" title="19">      <span class="dt">main =</span> <span class="st">&quot;Student&#39;s t Distribution&quot;</span>,</a>
-<a class="sourceLine" id="cb74-20" title="20">      <span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="fl">0.4</span>))</a>
-<a class="sourceLine" id="cb74-21" title="21"><span class="kw">abline</span>(<span class="dt">h =</span> <span class="dv">0</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb72-1" title="1"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>)) </a>
+<a class="sourceLine" id="cb72-2" title="2"><span class="kw">curve</span>(<span class="kw">dt</span>(x, <span class="dt">df =</span> <span class="dv">5</span>),</a>
+<a class="sourceLine" id="cb72-3" title="3">      <span class="dt">from =</span> <span class="dv">-4</span>,</a>
+<a class="sourceLine" id="cb72-4" title="4">      <span class="dt">to =</span> <span class="dv">4</span>,</a>
+<a class="sourceLine" id="cb72-5" title="5">      <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>,</a>
+<a class="sourceLine" id="cb72-6" title="6">      <span class="dt">lwd =</span> <span class="dv">2</span>,</a>
+<a class="sourceLine" id="cb72-7" title="7">      <span class="dt">xlab =</span> <span class="st">&quot;Random Variable X&quot;</span>,</a>
+<a class="sourceLine" id="cb72-8" title="8">      <span class="dt">ylab =</span> <span class="st">&quot;Probability Density&quot;</span>,</a>
+<a class="sourceLine" id="cb72-9" title="9">      <span class="dt">main =</span> <span class="st">&quot;Student&#39;s t Distribution&quot;</span>,</a>
+<a class="sourceLine" id="cb72-10" title="10">      <span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="fl">0.4</span>))</a>
+<a class="sourceLine" id="cb72-11" title="11"><span class="kw">abline</span>(<span class="dt">h =</span> <span class="dv">0</span>)</a>
+<a class="sourceLine" id="cb72-12" title="12"><span class="kw">curve</span>(<span class="kw">dt</span>(x, <span class="dt">df =</span> <span class="dv">100</span>),</a>
+<a class="sourceLine" id="cb72-13" title="13">      <span class="dt">from =</span> <span class="dv">-4</span>,</a>
+<a class="sourceLine" id="cb72-14" title="14">      <span class="dt">to =</span> <span class="dv">4</span>,</a>
+<a class="sourceLine" id="cb72-15" title="15">      <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>,</a>
+<a class="sourceLine" id="cb72-16" title="16">      <span class="dt">lwd =</span> <span class="dv">2</span>,</a>
+<a class="sourceLine" id="cb72-17" title="17">      <span class="dt">xlab =</span> <span class="st">&quot;Random Variable X&quot;</span>,</a>
+<a class="sourceLine" id="cb72-18" title="18">      <span class="dt">ylab =</span> <span class="st">&quot;Probability Density&quot;</span>,</a>
+<a class="sourceLine" id="cb72-19" title="19">      <span class="dt">main =</span> <span class="st">&quot;Student&#39;s t Distribution&quot;</span>,</a>
+<a class="sourceLine" id="cb72-20" title="20">      <span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="fl">0.4</span>))</a>
+<a class="sourceLine" id="cb72-21" title="21"><span class="kw">abline</span>(<span class="dt">h =</span> <span class="dv">0</span>)</a></code></pre></div>
 </div>
 <div id="ejercicio-6" class="section level3">
 <h3><span class="header-section-number">7.6.2</span> Ejercicio 6</h3>
@@ -455,13 +455,13 @@ y elija las siguientes opciones</p>
 <div id="en-r-3" class="section level3">
 <h3><span class="header-section-number">7.7.1</span> En R</h3>
 <p>Sea inferior a 7 dias —&gt; P(x&lt;7)</p>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb75-1" title="1"><span class="kw">pnorm</span>(<span class="dv">7</span>, <span class="dt">mean=</span><span class="dv">8</span>, <span class="dt">sd=</span><span class="dv">3</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb73-1" title="1"><span class="kw">pnorm</span>(<span class="dv">7</span>, <span class="dt">mean=</span><span class="dv">8</span>, <span class="dt">sd=</span><span class="dv">3</span>)</a></code></pre></div>
 <p>Sea superior a 3 días —&gt; P(x&gt;3) = 1-P(x&lt;3)</p>
-<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb76-1" title="1"><span class="dv">1</span><span class="op">-</span><span class="kw">pnorm</span>(<span class="dv">3</span>, <span class="dt">mean=</span><span class="dv">8</span>, <span class="dt">sd=</span><span class="dv">3</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb74-1" title="1"><span class="dv">1</span><span class="op">-</span><span class="kw">pnorm</span>(<span class="dv">3</span>, <span class="dt">mean=</span><span class="dv">8</span>, <span class="dt">sd=</span><span class="dv">3</span>)</a></code></pre></div>
 <p>Este comprendida entre 10 y 12 días</p>
-<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb77-1" title="1">dias10&lt;-<span class="kw">pnorm</span>(<span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">3</span>) <span class="co">#cálculo de área hasta el día 10</span></a>
-<a class="sourceLine" id="cb77-2" title="2">dias12&lt;-<span class="kw">pnorm</span>(<span class="dv">12</span>, <span class="dv">8</span>, <span class="dv">3</span>) <span class="co">#cálculo de área hasta el día 12</span></a>
-<a class="sourceLine" id="cb77-3" title="3">dias12<span class="op">-</span>dias10 <span class="co">#resto para conocer el área</span></a></code></pre></div>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb75-1" title="1">dias10&lt;-<span class="kw">pnorm</span>(<span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">3</span>) <span class="co">#cálculo de área hasta el día 10</span></a>
+<a class="sourceLine" id="cb75-2" title="2">dias12&lt;-<span class="kw">pnorm</span>(<span class="dv">12</span>, <span class="dv">8</span>, <span class="dv">3</span>) <span class="co">#cálculo de área hasta el día 12</span></a>
+<a class="sourceLine" id="cb75-3" title="3">dias12<span class="op">-</span>dias10 <span class="co">#resto para conocer el área</span></a></code></pre></div>
 
 </div>
 </div>

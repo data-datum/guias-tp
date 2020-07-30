@@ -24,7 +24,7 @@
 <meta name="author" content="Ingeniería Industrial" />
 
 
-<meta name="date" content="2020-07-23" />
+<meta name="date" content="2020-07-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -309,11 +309,11 @@ Nota: recuerde que la distribución normal se utiliza para muestras n&gt;30.</li
 </ul>
 <div id="en-r" class="section level3">
 <h3><span class="header-section-number">8.3.1</span> En R</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">En primer lugar calculo t</a>
-<a class="sourceLine" id="cb1-2" title="2">t&lt;-(<span class="fl">2.5</span><span class="dv">-3</span>)<span class="op">/</span>(<span class="fl">0.5</span><span class="op">/</span><span class="kw">sqrt</span>(<span class="dv">10</span>))</a>
-<a class="sourceLine" id="cb1-3" title="3">t</a></code></pre></div>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb76-1" title="1">En primer lugar calculo t</a>
+<a class="sourceLine" id="cb76-2" title="2">t&lt;-(<span class="fl">2.5</span><span class="dv">-3</span>)<span class="op">/</span>(<span class="fl">0.5</span><span class="op">/</span><span class="kw">sqrt</span>(<span class="dv">10</span>))</a>
+<a class="sourceLine" id="cb76-3" title="3">t</a></code></pre></div>
 <p>Luego, reemplazo ese valor en el siguiente comando:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">pt</span>(<span class="dt">q=</span>t, <span class="dt">df=</span>grados<span class="op">-</span>libertad, <span class="dt">lower.tail=</span>T)</a></code></pre></div>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb77-1" title="1"><span class="kw">pt</span>(<span class="dt">q=</span>t, <span class="dt">df=</span>grados<span class="op">-</span>libertad, <span class="dt">lower.tail=</span>T)</a></code></pre></div>
 <p>Recuerde: Grados de libertad (GL) = n-1</p>
 </div>
 <div id="cálculo-de-intervalos-de-confianza-para-la-media-de-una-población-con-desviación-típica-conocida" class="section level3">
@@ -331,25 +331,25 @@ Nota: recuerde que la distribución normal se utiliza para muestras n&gt;30.</li
 <p>Siendo z(alfa/2) , el cuantil de la distribución normal estándar que arrastra una probabilidad de alfa/2, con alfa nivel de significancia establecido.</p>
 <p>si yo deseo tener un nivel de confianza del 90%, entonces alfa va a ser del 10% y alfa/2 va a ser 5%.</p>
 <p><img src="img/normal.png" width="100%" /></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">qnorm</span>(<span class="fl">0.05</span>,<span class="dv">0</span>,<span class="dv">1</span>) <span class="co">#el valor de alfa/2=0.05, media=0 y sd=1</span></a></code></pre></div>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb78-1" title="1"><span class="kw">qnorm</span>(<span class="fl">0.05</span>,<span class="dv">0</span>,<span class="dv">1</span>) <span class="co">#el valor de alfa/2=0.05, media=0 y sd=1</span></a></code></pre></div>
 <pre><code>## [1] -1.644854</code></pre>
 <p>3.Cálculo de los límites del intervalo.</p>
 <p>Está dado por la siguiente fórmula</p>
 <p><img src="img/intervaloZ.png" width="50%" /></p>
 <p>Resolvemos</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">n &lt;-<span class="st"> </span><span class="dv">50</span>    <span class="co"># El tamaño válido de la muestra</span></a>
-<a class="sourceLine" id="cb5-2" title="2">media &lt;-<span class="st"> </span><span class="dv">32</span> <span class="co"># la media </span></a>
-<a class="sourceLine" id="cb5-3" title="3">desv &lt;-<span class="st"> </span><span class="dv">6</span>  <span class="co"># La desviación estándar. Datos históricos</span></a>
-<a class="sourceLine" id="cb5-4" title="4">nivelconfianza =<span class="st"> </span><span class="fl">0.90</span></a></code></pre></div>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb80-1" title="1">n &lt;-<span class="st"> </span><span class="dv">50</span>    <span class="co"># El tamaño válido de la muestra</span></a>
+<a class="sourceLine" id="cb80-2" title="2">media &lt;-<span class="st"> </span><span class="dv">32</span> <span class="co"># la media </span></a>
+<a class="sourceLine" id="cb80-3" title="3">desv &lt;-<span class="st"> </span><span class="dv">6</span>  <span class="co"># La desviación estándar. Datos históricos</span></a>
+<a class="sourceLine" id="cb80-4" title="4">nivelconfianza =<span class="st"> </span><span class="fl">0.90</span></a></code></pre></div>
 <p>utilizo la formula</p>
 <p><img src="img/errorZ.png" width="50%" /></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1">error.est &lt;-<span class="st"> </span>desv<span class="op">/</span><span class="kw">sqrt</span>(n) <span class="co"># Calculamos el error estándar</span></a>
-<a class="sourceLine" id="cb6-2" title="2">margen.error &lt;-<span class="st"> </span><span class="fl">1.644854</span> <span class="op">*</span><span class="st"> </span>error.est <span class="co"># nivel de confianza de 90% </span></a></code></pre></div>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1">lim.inf &lt;-<span class="st"> </span>media <span class="op">-</span><span class="st"> </span>margen.error <span class="co"># Límite inferior del intervalo</span></a>
-<a class="sourceLine" id="cb7-2" title="2">lim.inf</a></code></pre></div>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb81-1" title="1">error.est &lt;-<span class="st"> </span>desv<span class="op">/</span><span class="kw">sqrt</span>(n) <span class="co"># Calculamos el error estándar</span></a>
+<a class="sourceLine" id="cb81-2" title="2">margen.error &lt;-<span class="st"> </span><span class="fl">1.644854</span> <span class="op">*</span><span class="st"> </span>error.est <span class="co"># nivel de confianza de 90% </span></a></code></pre></div>
+<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb82-1" title="1">lim.inf &lt;-<span class="st"> </span>media <span class="op">-</span><span class="st"> </span>margen.error <span class="co"># Límite inferior del intervalo</span></a>
+<a class="sourceLine" id="cb82-2" title="2">lim.inf</a></code></pre></div>
 <pre><code>## [1] 30.6043</code></pre>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1">lim.sup &lt;-<span class="st"> </span>media <span class="op">+</span><span class="st"> </span>margen.error <span class="co"># Límite superior del intervalo</span></a>
-<a class="sourceLine" id="cb9-2" title="2">lim.sup</a></code></pre></div>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb84-1" title="1">lim.sup &lt;-<span class="st"> </span>media <span class="op">+</span><span class="st"> </span>margen.error <span class="co"># Límite superior del intervalo</span></a>
+<a class="sourceLine" id="cb84-2" title="2">lim.sup</a></code></pre></div>
 <pre><code>## [1] 33.3957</code></pre>
 </div>
 <div id="cálculo-de-intervalos-de-confianza-para-la-media-de-una-población-para-muestras-pequeñas-o-desviación-típica-desconocida" class="section level3">
@@ -375,7 +375,7 @@ GL=n – 1</li>
 <p><img src="img/errorT.png" width="50%" /></p>
 <p>t(alfa/2) lo calculamos con la función qt(probabilidad, grados de libertad)</p>
 <p>Por ejemplo para un nivel de confianza de 0.9, alfa/2 va a ser 0.05 y una muestra de tamaño 10</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1"><span class="kw">qt</span>(<span class="fl">0.05</span>,<span class="dv">9</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb86-1" title="1"><span class="kw">qt</span>(<span class="fl">0.05</span>,<span class="dv">9</span>)</a></code></pre></div>
 <pre><code>## [1] -1.833113</code></pre>
 <p>t(alfa/2)=1.833</p>
 <p>Para armar el intervalo de confianza usamos la siguiente fórmula:</p>
@@ -388,21 +388,21 @@ GL=n – 1</li>
 a. Determine el intervalo de confianza para la venta media por trabajador en la Editorial al 99 %.</p>
 <div id="en-r-1" class="section level3">
 <h3><span class="header-section-number">8.4.1</span> En R</h3>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1">n &lt;-<span class="st"> </span><span class="dv">15</span>   <span class="co"># El tamaño válido de la muestra</span></a>
-<a class="sourceLine" id="cb13-2" title="2">media &lt;-<span class="st"> </span><span class="dv">5</span> <span class="co"># la media </span></a>
-<a class="sourceLine" id="cb13-3" title="3">nivelconfianza =<span class="st"> </span><span class="fl">0.99</span></a>
-<a class="sourceLine" id="cb13-4" title="4">desv &lt;-<span class="st"> </span><span class="kw">sqrt</span>(<span class="dv">2</span>)  </a></code></pre></div>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1"><span class="co">#En vez de _qnorm_ utilizo _qt_ en este caso de muestras pequeñas, </span></a>
-<a class="sourceLine" id="cb14-2" title="2"><span class="co">#estoy trabajando con la distribución t de student</span></a>
-<a class="sourceLine" id="cb14-3" title="3"><span class="kw">qt</span>(<span class="fl">0.005</span>,<span class="dv">14</span>) <span class="co"># 0.005 y 14 grados de libertad</span></a></code></pre></div>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" title="1">error.est &lt;-<span class="st"> </span>desv<span class="op">/</span><span class="kw">sqrt</span>(n) <span class="co"># Calculamos el error estándar</span></a>
-<a class="sourceLine" id="cb15-2" title="2">margen.error &lt;-<span class="st"> </span><span class="fl">2.97</span> <span class="op">*</span><span class="st"> </span>error.est <span class="co"># nivel de confianza de 99% </span></a></code></pre></div>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb88-1" title="1">n &lt;-<span class="st"> </span><span class="dv">15</span>   <span class="co"># El tamaño válido de la muestra</span></a>
+<a class="sourceLine" id="cb88-2" title="2">media &lt;-<span class="st"> </span><span class="dv">5</span> <span class="co"># la media </span></a>
+<a class="sourceLine" id="cb88-3" title="3">nivelconfianza =<span class="st"> </span><span class="fl">0.99</span></a>
+<a class="sourceLine" id="cb88-4" title="4">desv &lt;-<span class="st"> </span><span class="kw">sqrt</span>(<span class="dv">2</span>)  </a></code></pre></div>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb89-1" title="1"><span class="co">#En vez de _qnorm_ utilizo _qt_ en este caso de muestras pequeñas, </span></a>
+<a class="sourceLine" id="cb89-2" title="2"><span class="co">#estoy trabajando con la distribución t de student</span></a>
+<a class="sourceLine" id="cb89-3" title="3"><span class="kw">qt</span>(<span class="fl">0.005</span>,<span class="dv">14</span>) <span class="co"># 0.005 y 14 grados de libertad</span></a></code></pre></div>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb90-1" title="1">error.est &lt;-<span class="st"> </span>desv<span class="op">/</span><span class="kw">sqrt</span>(n) <span class="co"># Calculamos el error estándar</span></a>
+<a class="sourceLine" id="cb90-2" title="2">margen.error &lt;-<span class="st"> </span><span class="fl">2.97</span> <span class="op">*</span><span class="st"> </span>error.est <span class="co"># nivel de confianza de 99% </span></a></code></pre></div>
 <p>Cálculo de límite inferior</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1">lim.inf &lt;-<span class="st"> </span>media <span class="op">-</span><span class="st"> </span>margen.error <span class="co"># Límite inferior del intervalo</span></a>
-<a class="sourceLine" id="cb16-2" title="2">lim.inf</a></code></pre></div>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb91-1" title="1">lim.inf &lt;-<span class="st"> </span>media <span class="op">-</span><span class="st"> </span>margen.error <span class="co"># Límite inferior del intervalo</span></a>
+<a class="sourceLine" id="cb91-2" title="2">lim.inf</a></code></pre></div>
 <p>Cálculo el límite superior</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" title="1">lim.sup &lt;-<span class="st"> </span>media <span class="op">+</span><span class="st"> </span>margen.error <span class="co"># Límite superior del intervalo</span></a>
-<a class="sourceLine" id="cb17-2" title="2">lim.sup</a></code></pre></div>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb92-1" title="1">lim.sup &lt;-<span class="st"> </span>media <span class="op">+</span><span class="st"> </span>margen.error <span class="co"># Límite superior del intervalo</span></a>
+<a class="sourceLine" id="cb92-2" title="2">lim.sup</a></code></pre></div>
 </div>
 </div>
 <div id="ejercicio-4" class="section level2">
@@ -472,6 +472,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

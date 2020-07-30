@@ -37,7 +37,7 @@ Se registró el lugar de procedencia, según departamento, de 40 empleados de la
 
 
 
-```{r echo=FALSE}
+```{r echo=FALSE, warning=FALSE}
 f1<-c("Ituzaingo","Beron de Astrada","Goya","Capital","Mercedes")
 f2<-c("Mercedes","Santo Tome","Beron de Astrada","San Cosme","Ituzaingo")
 f3<-c("Capital","Capital","Capital","Mercedes","Mercedes")
@@ -112,7 +112,7 @@ Escriba los nombres en minúscula, sin espacio y sin tilde, para evitar errores 
 ## Ejercicio 3
 Las ganancias de peso en Kg de 40 cerdos en 60 días fueron:
 
-```{r echo=FALSE}
+```{r echo=FALSE, warning=FALSE}
 f1<-c(30.2,17.6,34.3,30.6,33.4,31.6,52.1,21.8,30.1,36.7)
 f2<-c(33.3,53.1,11.5,21.5,32.4,40.1,53.4,40.9,33.2,32.7)
 f3<-c(29.0,15.2,12.2,27.3,29.5,33.6,32.3,25.5,19.7,33.4)

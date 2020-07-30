@@ -2,7 +2,6 @@
 
 ## Objetivos
 
-
 Que el alumno 
 
 * interprete los análisis de correlación y regresión

@@ -24,7 +24,7 @@
 <meta name="author" content="Ingeniería Industrial" />
 
 
-<meta name="date" content="2020-07-23" />
+<meta name="date" content="2020-07-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -306,7 +306,7 @@ dataset mtcars que se encuentra guardado en R.</p>
 <div id="en-r" class="section level3">
 <h3><span class="header-section-number">6.2.1</span> En R</h3>
 <p>Podemos graficar mediante la función <strong>boxplot()</strong> eligiendo las variables ‘mpg’ y ‘cyl’</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb58-1" title="1"><span class="kw">boxplot</span>(mpg<span class="op">~</span>cyl, <span class="dt">data=</span>mtcars) <span class="co">#gráfico de boxplot</span></a></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb56-1" title="1"><span class="kw">boxplot</span>(mpg<span class="op">~</span>cyl, <span class="dt">data=</span>mtcars) <span class="co">#gráfico de boxplot</span></a></code></pre></div>
 <p><img src="guias-tp_files/figure-html/unnamed-chunk-43-1.png" width="672" /></p>
 <p>También podemos elegir otros dos pares de variables</p>
 <ul>
@@ -318,7 +318,7 @@ dataset mtcars que se encuentra guardado en R.</p>
 <div id="en-r-1" class="section level3">
 <h3><span class="header-section-number">6.2.2</span> En R</h3>
 <p>Graficamos ahora con las variables ‘am’ y ‘wt’.</p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb59-1" title="1"><span class="kw">boxplot</span>(wt<span class="op">~</span>am, <span class="dt">data=</span>mtcars) <span class="co">#gráfico de boxplot</span></a></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb57-1" title="1"><span class="kw">boxplot</span>(wt<span class="op">~</span>am, <span class="dt">data=</span>mtcars) <span class="co">#gráfico de boxplot</span></a></code></pre></div>
 <p><img src="guias-tp_files/figure-html/unnamed-chunk-44-1.png" width="672" /></p>
 </div>
 </div>
@@ -335,23 +335,23 @@ dataset mtcars que se encuentra guardado en R.</p>
 <div id="en-r-2" class="section level3">
 <h3><span class="header-section-number">6.3.1</span> En R</h3>
 <p>Ingresamos los datos como <em>vector de valores enteros</em></p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb60-1" title="1">suelo&lt;-<span class="kw">c</span>(<span class="dv">11</span>, <span class="dv">17</span>, <span class="dv">14</span>, <span class="dv">20</span>, <span class="dv">22</span>, <span class="dv">30</span>, <span class="dv">20</span>, <span class="dv">16</span>, <span class="dv">9</span>, <span class="dv">15</span>, <span class="dv">18</span>, <span class="dv">17</span>, <span class="dv">41</span>, <span class="dv">22</span>, <span class="dv">17</span>, <span class="dv">18</span>, <span class="dv">22</span>, <span class="dv">19</span>, <span class="dv">23</span>, <span class="dv">15</span>, </a>
-<a class="sourceLine" id="cb60-2" title="2">         <span class="dv">13</span>, <span class="dv">20</span>, <span class="dv">23</span>, <span class="dv">29</span>, <span class="dv">21</span>, <span class="dv">14</span>, <span class="dv">14</span>, <span class="dv">16</span>, <span class="dv">18</span>, <span class="dv">18</span>, <span class="dv">43</span>, <span class="dv">23</span>, <span class="dv">24</span>, <span class="dv">19</span>, <span class="dv">34</span>, <span class="dv">16</span>, <span class="dv">24</span>, <span class="dv">16</span>, <span class="dv">35</span>, <span class="dv">24</span>, </a>
-<a class="sourceLine" id="cb60-3" title="3">         <span class="dv">11</span>, <span class="dv">15</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="dv">9</span>, <span class="dv">41</span>, <span class="dv">33</span>, <span class="dv">17</span>, <span class="dv">12</span>, <span class="dv">15</span>, <span class="dv">25</span>, <span class="dv">18</span>, <span class="dv">22</span>, <span class="dv">35</span>, <span class="dv">20</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">40</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb58-1" title="1">suelo&lt;-<span class="kw">c</span>(<span class="dv">11</span>, <span class="dv">17</span>, <span class="dv">14</span>, <span class="dv">20</span>, <span class="dv">22</span>, <span class="dv">30</span>, <span class="dv">20</span>, <span class="dv">16</span>, <span class="dv">9</span>, <span class="dv">15</span>, <span class="dv">18</span>, <span class="dv">17</span>, <span class="dv">41</span>, <span class="dv">22</span>, <span class="dv">17</span>, <span class="dv">18</span>, <span class="dv">22</span>, <span class="dv">19</span>, <span class="dv">23</span>, <span class="dv">15</span>, </a>
+<a class="sourceLine" id="cb58-2" title="2">         <span class="dv">13</span>, <span class="dv">20</span>, <span class="dv">23</span>, <span class="dv">29</span>, <span class="dv">21</span>, <span class="dv">14</span>, <span class="dv">14</span>, <span class="dv">16</span>, <span class="dv">18</span>, <span class="dv">18</span>, <span class="dv">43</span>, <span class="dv">23</span>, <span class="dv">24</span>, <span class="dv">19</span>, <span class="dv">34</span>, <span class="dv">16</span>, <span class="dv">24</span>, <span class="dv">16</span>, <span class="dv">35</span>, <span class="dv">24</span>, </a>
+<a class="sourceLine" id="cb58-3" title="3">         <span class="dv">11</span>, <span class="dv">15</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="dv">9</span>, <span class="dv">41</span>, <span class="dv">33</span>, <span class="dv">17</span>, <span class="dv">12</span>, <span class="dv">15</span>, <span class="dv">25</span>, <span class="dv">18</span>, <span class="dv">22</span>, <span class="dv">35</span>, <span class="dv">20</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">40</span>)</a></code></pre></div>
 <p>En R podemos usar la funcion <strong>summary()</strong> para conocer la media, la mediana, valores mínimos, máximos, el primer y tercer cuartil.</p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb61-1" title="1"><span class="kw">summary</span>(suelo)</a></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb59-1" title="1"><span class="kw">summary</span>(suelo)</a></code></pre></div>
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 ##    9.00   14.75   18.00   20.28   23.00   43.00</code></pre>
 <p>En R la función <strong>quantile()</strong> nos permite conocer los cuartiles</p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb63-1" title="1"><span class="kw">quantile</span>(suelo)</a></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb61-1" title="1"><span class="kw">quantile</span>(suelo)</a></code></pre></div>
 <pre><code>##    0%   25%   50%   75%  100% 
 ##  9.00 14.75 18.00 23.00 43.00</code></pre>
 <p>En R, podemos conocer el percentil 5% y 95% mediante el siguiente comando</p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb65-1" title="1"><span class="kw">quantile</span>(suelo, <span class="dt">probs=</span><span class="kw">c</span>(<span class="fl">0.05</span>, <span class="fl">0.95</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb63-1" title="1"><span class="kw">quantile</span>(suelo, <span class="dt">probs=</span><span class="kw">c</span>(<span class="fl">0.05</span>, <span class="fl">0.95</span>))</a></code></pre></div>
 <pre><code>##    5%   95% 
 ## 11.00 40.05</code></pre>
 <p>Un diagrama de cajas lo podemos realizar mediante la funcion <strong>boxplot()</strong></p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb67-1" title="1"><span class="kw">boxplot</span>(suelo)</a></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb65-1" title="1"><span class="kw">boxplot</span>(suelo)</a></code></pre></div>
 <p><img src="guias-tp_files/figure-html/unnamed-chunk-49-1.png" width="672" /></p>
 </div>
 </div>
