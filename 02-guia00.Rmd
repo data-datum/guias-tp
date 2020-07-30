@@ -170,6 +170,11 @@ c(TRUE, FALSE, TRUE, FALSE)
 ```
 
 
+
+
+```{r}
+knitr::include_url("https://www.youtube.com/watch?v=CCxVQeVijYo&list=PLNwm0SNfmJPjdkSehOLHPjr3ID2161Er8&index=1")
+```
 ### Matrices
 
 Las matrices son arreglos rectangulares de filas y columnas con información numérica, alfanumérica o lógica. Para construir una matriz se usa la función __matrix( )__. Por ejemplo, para crear una matriz de 4 filas y 5 columnas (de dimensión 4×5) con los primeros 20 números positivos se escribe el código siguiente en la consola.
