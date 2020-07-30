@@ -409,23 +409,26 @@ Los datos fueron extraido de la revista Motor Trend US de 1974 y muestran el con
 <pre><code>## The following objects are masked from mtcars (pos = 3):
 ## 
 ##     am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
-<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb186-1" title="1">vsAm &lt;-<span class="st"> </span><span class="kw">table</span>(vs, am)  </a>
-<a class="sourceLine" id="cb186-2" title="2">vsAm</a></code></pre></div>
+<pre><code>## The following objects are masked from mtcars (pos = 4):
+## 
+##     am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<div class="sourceCode" id="cb187"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb187-1" title="1">vsAm &lt;-<span class="st"> </span><span class="kw">table</span>(vs, am)  </a>
+<a class="sourceLine" id="cb187-2" title="2">vsAm</a></code></pre></div>
 <pre><code>##    am
 ## vs   0  1
 ##   0 12  6
 ##   1  7  7</code></pre>
 <p>Tabla 2: Variables gear y carb. Corresponde a carb=número de carburadores y gear=número de marchas adelante.</p>
-<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb188-1" title="1">Gearcarb&lt;-<span class="st"> </span><span class="kw">table</span>(gear, carb)  </a>
-<a class="sourceLine" id="cb188-2" title="2">Gearcarb</a></code></pre></div>
+<div class="sourceCode" id="cb189"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb189-1" title="1">Gearcarb&lt;-<span class="st"> </span><span class="kw">table</span>(gear, carb)  </a>
+<a class="sourceLine" id="cb189-2" title="2">Gearcarb</a></code></pre></div>
 <pre><code>##     carb
 ## gear 1 2 3 4 6 8
 ##    3 3 4 3 5 0 0
 ##    4 4 4 0 4 0 0
 ##    5 0 2 0 1 1 1</code></pre>
 <p>Tabla 3: Variables cyl y gear. Corresponde a cyl= número de cilindros y gear=número de marchas adelante</p>
-<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb190-1" title="1">cylGear &lt;-<span class="st"> </span><span class="kw">table</span>(cyl,gear)</a>
-<a class="sourceLine" id="cb190-2" title="2">cylGear</a></code></pre></div>
+<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb191-1" title="1">cylGear &lt;-<span class="st"> </span><span class="kw">table</span>(cyl,gear)</a>
+<a class="sourceLine" id="cb191-2" title="2">cylGear</a></code></pre></div>
 <pre><code>##    gear
 ## cyl  3  4  5
 ##   4  1  8  2
@@ -435,15 +438,15 @@ Los datos fueron extraido de la revista Motor Trend US de 1974 y muestran el con
 <ul>
 <li>Prueba 1</li>
 </ul>
-<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb192-1" title="1"><span class="kw">chisq.test</span>(vsAm) </a></code></pre></div>
+<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb193-1" title="1"><span class="kw">chisq.test</span>(vsAm) </a></code></pre></div>
 <ul>
 <li>Prueba 2</li>
 </ul>
-<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb193-1" title="1"><span class="kw">chisq.test</span>(Gearcarb) </a></code></pre></div>
+<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb194-1" title="1"><span class="kw">chisq.test</span>(Gearcarb) </a></code></pre></div>
 <ul>
 <li>Prueba 3</li>
 </ul>
-<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb194-1" title="1"><span class="kw">chisq.test</span>(cylGear) </a></code></pre></div>
+<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb195-1" title="1"><span class="kw">chisq.test</span>(cylGear) </a></code></pre></div>
 
 </div>
 </div>

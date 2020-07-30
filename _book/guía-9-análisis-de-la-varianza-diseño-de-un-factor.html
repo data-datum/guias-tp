@@ -364,7 +364,7 @@ Las observaciones obtenidas acerca de la resistencia a la tensión son:</p>
 <li>Realizar un análisis de la varianza con un nivel de significancia alfa=5%.</li>
 <li>Si corresponde realizar la prueba de Tukey e interpretar los resultados.</li>
 </ol>
-<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb202-1" title="1"><span class="co">#importamos los datos con &quot;import dataset&quot; el set de datos &#39;algodon.csv&#39;</span></a></code></pre></div>
+<div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb203-1" title="1"><span class="co">#importamos los datos con &quot;import dataset&quot; el set de datos &#39;algodon.csv&#39;</span></a></code></pre></div>
 <p>En el set de datos:</p>
 <ul>
 <li>Grupo1: 15 % de algodón</li>
@@ -373,8 +373,8 @@ Las observaciones obtenidas acerca de la resistencia a la tensión son:</p>
 <li>Grupo4: 30 % de algodón</li>
 <li>Grupo5: 35 % de algodón</li>
 </ul>
-<div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb203-1" title="1"><span class="co">#controlamos que haya sido importado el dataset de manera correcta</span></a>
-<a class="sourceLine" id="cb203-2" title="2"><span class="kw">head</span>(algodon)</a></code></pre></div>
+<div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb204-1" title="1"><span class="co">#controlamos que haya sido importado el dataset de manera correcta</span></a>
+<a class="sourceLine" id="cb204-2" title="2"><span class="kw">head</span>(algodon)</a></code></pre></div>
 <pre><code>##   muestras  grupo
 ## 1        7 grupo1
 ## 2        7 grupo1
@@ -382,20 +382,20 @@ Las observaciones obtenidas acerca de la resistencia a la tensión son:</p>
 ## 4       11 grupo1
 ## 5        9 grupo1
 ## 6       12 grupo2</code></pre>
-<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb205-1" title="1"><span class="co">#visualizamos como se distribuyen los valores para cada grupo</span></a>
-<a class="sourceLine" id="cb205-2" title="2"><span class="kw">boxplot</span>(muestras<span class="op">~</span>grupo, <span class="dt">data=</span>algodon)</a></code></pre></div>
-<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb206-1" title="1"><span class="kw">aov</span>(muestras<span class="op">~</span>grupo, <span class="dt">data=</span>algodon)</a></code></pre></div>
-<div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb207-1" title="1">anova_algodon&lt;-<span class="kw">aov</span>(muestras<span class="op">~</span>grupo, <span class="dt">data=</span>algodon)</a>
-<a class="sourceLine" id="cb207-2" title="2"><span class="kw">summary</span>(anova_algodon)</a></code></pre></div>
-<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb208-1" title="1"><span class="co">#prueba de Tukey</span></a>
-<a class="sourceLine" id="cb208-2" title="2"><span class="kw">TukeyHSD</span>(anova_algodon)</a></code></pre></div>
+<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb206-1" title="1"><span class="co">#visualizamos como se distribuyen los valores para cada grupo</span></a>
+<a class="sourceLine" id="cb206-2" title="2"><span class="kw">boxplot</span>(muestras<span class="op">~</span>grupo, <span class="dt">data=</span>algodon)</a></code></pre></div>
+<div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb207-1" title="1"><span class="kw">aov</span>(muestras<span class="op">~</span>grupo, <span class="dt">data=</span>algodon)</a></code></pre></div>
+<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb208-1" title="1">anova_algodon&lt;-<span class="kw">aov</span>(muestras<span class="op">~</span>grupo, <span class="dt">data=</span>algodon)</a>
+<a class="sourceLine" id="cb208-2" title="2"><span class="kw">summary</span>(anova_algodon)</a></code></pre></div>
+<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb209-1" title="1"><span class="co">#prueba de Tukey</span></a>
+<a class="sourceLine" id="cb209-2" title="2"><span class="kw">TukeyHSD</span>(anova_algodon)</a></code></pre></div>
 </div>
 <div id="ejercicio-2" class="section level2">
 <h2><span class="header-section-number">12.3</span> Ejercicio 2</h2>
 <p>La estructura financiera de una empresa consiste en la forma en que sus activos se dividen en capital y deuda, y el apalancamiento financiero se refiere al porcentaje de activos financiados con endeudamiento.
 En el artículo The Effect of Financial Leverage on Return, Tai Ma, de Virginia Tech, afirma que es posible utilizar el apalancamiento financiero para incrementar la tasa de rendimiento sobre el capital. Dicho de otra manera, los accionistas pueden recibir rendimientos más elevados sobre el capital propio con la misma cantidad de inversión si usan apalancamiento financiero. Los siguientes datos muestran las tasas de rendimiento sobre el capital utilizando 3 niveles distintos de apalancamiento financiero, así como un nivel de control (deuda igual a cero) para 24 empresas seleccionadas al azar.</p>
 <table>
-<caption><span id="tab:unnamed-chunk-162">Table 12.1: </span>Tasas de rendimiento sobre el capital</caption>
+<caption><span id="tab:unnamed-chunk-163">Table 12.1: </span>Tasas de rendimiento sobre el capital</caption>
 <thead>
 <tr class="header">
 <th align="center">Control</th>
@@ -449,11 +449,11 @@ En el artículo The Effect of Financial Leverage on Return, Tai Ma, de Virginia 
 <li>Realizar un gráfico de boxplot para visualizar como se distribuyen los valores obtenidos en el estudio.</li>
 <li>Haga el análisis de varianza a un nivel de significancia de 0.05. Liste el modelo y los supuestos asociados. d. Informe el p-valor y aporte las conclusiones estadísticas al problema, indicando la hipótesis nula y la alternativa.</li>
 </ol>
-<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb209-1" title="1"><span class="co">#En primer lugar vamos a ingresar los datos</span></a>
-<a class="sourceLine" id="cb209-2" title="2"><span class="co">#recordar como se ingresa con import dataset</span></a>
-<a class="sourceLine" id="cb209-3" title="3"><span class="co">#llamamos al objeto ingresado &quot;empresa&quot;</span></a></code></pre></div>
-<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb210-1" title="1"><span class="co">#corroboramos que el dataset fue importado correctamente</span></a>
-<a class="sourceLine" id="cb210-2" title="2"><span class="kw">head</span>(empresa)</a></code></pre></div>
+<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb210-1" title="1"><span class="co">#En primer lugar vamos a ingresar los datos</span></a>
+<a class="sourceLine" id="cb210-2" title="2"><span class="co">#recordar como se ingresa con import dataset</span></a>
+<a class="sourceLine" id="cb210-3" title="3"><span class="co">#llamamos al objeto ingresado &quot;empresa&quot;</span></a></code></pre></div>
+<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb211-1" title="1"><span class="co">#corroboramos que el dataset fue importado correctamente</span></a>
+<a class="sourceLine" id="cb211-2" title="2"><span class="kw">head</span>(empresa)</a></code></pre></div>
 <pre><code>##   empresa apalancamiento
 ## 1     2.1        control
 ## 2     5.6        control
@@ -461,11 +461,11 @@ En el artículo The Effect of Financial Leverage on Return, Tai Ma, de Virginia 
 ## 4     7.8        control
 ## 5     5.2        control
 ## 6     2.6        control</code></pre>
-<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb212-1" title="1"><span class="co">#visualizamos como se distribuyen los valores para cada grupo</span></a>
-<a class="sourceLine" id="cb212-2" title="2"><span class="kw">boxplot</span>(empresa <span class="op">~</span><span class="st"> </span>apalancamiento, <span class="dt">data =</span> empresa)</a></code></pre></div>
-<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb213-1" title="1"><span class="kw">aov</span>(empresa <span class="op">~</span><span class="st"> </span>apalancamiento, <span class="dt">data =</span> empresa)</a></code></pre></div>
-<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb214-1" title="1">anova_emp&lt;-<span class="kw">aov</span>(empresa <span class="op">~</span><span class="st"> </span>apalancamiento, <span class="dt">data =</span> empresa)</a>
-<a class="sourceLine" id="cb214-2" title="2"><span class="kw">summary</span>(anova_emp)</a></code></pre></div>
+<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb213-1" title="1"><span class="co">#visualizamos como se distribuyen los valores para cada grupo</span></a>
+<a class="sourceLine" id="cb213-2" title="2"><span class="kw">boxplot</span>(empresa <span class="op">~</span><span class="st"> </span>apalancamiento, <span class="dt">data =</span> empresa)</a></code></pre></div>
+<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb214-1" title="1"><span class="kw">aov</span>(empresa <span class="op">~</span><span class="st"> </span>apalancamiento, <span class="dt">data =</span> empresa)</a></code></pre></div>
+<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb215-1" title="1">anova_emp&lt;-<span class="kw">aov</span>(empresa <span class="op">~</span><span class="st"> </span>apalancamiento, <span class="dt">data =</span> empresa)</a>
+<a class="sourceLine" id="cb215-2" title="2"><span class="kw">summary</span>(anova_emp)</a></code></pre></div>
 
 </div>
 </div>

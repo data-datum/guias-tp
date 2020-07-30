@@ -172,7 +172,7 @@ c(TRUE, FALSE, TRUE, FALSE)
 
 
 
-```{r}
+```{r echo=FALSE}
 knitr::include_url("https://www.youtube.com/watch?v=CCxVQeVijYo&list=PLNwm0SNfmJPjdkSehOLHPjr3ID2161Er8&index=1")
 ```
 ### Matrices
